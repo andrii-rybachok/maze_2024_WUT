@@ -19,7 +19,7 @@ void printSolve(Graph filledGraph,char* destFileName);
 
 void fillGraph(Graph graph, char* filename);
 
-int isDeadEnd(char maze[][MAZE_SIZE_Y], int x, int y);
+void isDeadEnd(char maze[][MAZE_SIZE_Y], int x, int y);
 
 void writeMazeToFile(char maze[][MAZE_SIZE_Y], char *filename, int rows);
 

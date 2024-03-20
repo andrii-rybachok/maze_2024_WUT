@@ -1,0 +1,1163 @@
+desc: (none)
+cmd: ./bin/maze
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=145411
+mem_heap_B=4568
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=151724937
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=155612325
+mem_heap_B=229744
+mem_heap_extra_B=114368
+mem_stacks_B=0
+heap_tree=detailed
+n3: 229744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 114368 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 108080 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 108080 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 6288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 6288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 3968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 3968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 3968 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 2320 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 114352 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 108064 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 108064 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 6288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 6288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 3968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 3968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 3968 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 2320 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=162198809
+mem_heap_B=645568
+mem_heap_extra_B=322280
+mem_stacks_B=0
+heap_tree=detailed
+n3: 645568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 322272 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 303856 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 303856 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 18416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 18416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 11488 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 11488 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 11488 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 6928 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 322272 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 303856 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 303856 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 18416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 18416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 11488 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 11488 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 11488 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 6928 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=166299015
+mem_heap_B=869632
+mem_heap_extra_B=434312
+mem_stacks_B=0
+heap_tree=detailed
+n3: 869632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 434304 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 409504 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 409504 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 24800 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 24800 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 15584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 15584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 15584 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 9216 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 434304 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 409504 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 409504 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 24800 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 24800 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 15584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 15584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 15584 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 9216 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=171279075
+mem_heap_B=1178624
+mem_heap_extra_B=588808
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1178624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 588800 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 555680 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 555680 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 33120 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 33120 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 20624 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 20624 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 20624 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 12496 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 588800 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 555680 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 555680 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 33120 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 33120 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 20624 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 20624 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 20624 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 12496 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=178197440
+mem_heap_B=1574576
+mem_heap_extra_B=786784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=185324475
+mem_heap_B=1986688
+mem_heap_extra_B=992840
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1986688 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 992832 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 937136 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 937136 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 55696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 55696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 34736 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 34736 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 34736 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 20960 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 992832 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 937136 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 937136 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 55696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 55696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 34736 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 34736 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 34736 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 20960 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=189971911
+mem_heap_B=2269440
+mem_heap_extra_B=1134216
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2269440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1134208 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 1070544 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 1070544 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 63664 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 63664 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 39600 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 39600 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 39600 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 24064 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1134208 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 1070544 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 1070544 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 63664 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 63664 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 39600 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 39600 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 39600 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 24064 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=196560434
+mem_heap_B=2677008
+mem_heap_extra_B=1338000
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=203238191
+mem_heap_B=3072880
+mem_heap_extra_B=1535936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=210335462
+mem_heap_B=3505568
+mem_heap_extra_B=1752280
+mem_stacks_B=0
+heap_tree=detailed
+n3: 3505568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1752272 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 1654464 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 1654464 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 97808 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 97808 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 61104 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 61104 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 61104 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 36704 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1752272 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 1654464 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 1654464 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 97808 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 97808 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 61104 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 61104 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 61104 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 36704 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=218587819
+mem_heap_B=3982288
+mem_heap_extra_B=1990640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=226446895
+mem_heap_B=4469824
+mem_heap_extra_B=2234408
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=231652349
+mem_heap_B=4768816
+mem_heap_extra_B=2383904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=237639943
+mem_heap_B=5134512
+mem_heap_extra_B=2566752
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=246279788
+mem_heap_B=5682576
+mem_heap_extra_B=2840784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=254375811
+mem_heap_B=6114448
+mem_heap_extra_B=3056720
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=260377367
+mem_heap_B=6493184
+mem_heap_extra_B=3246088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=266037810
+mem_heap_B=6787984
+mem_heap_extra_B=3393488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=274851655
+mem_heap_B=7308016
+mem_heap_extra_B=3653504
+mem_stacks_B=0
+heap_tree=detailed
+n3: 7308016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3653504 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 3449888 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 3449888 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 203616 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 203616 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 127520 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 127520 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 127520 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 76096 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 3653488 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 3449872 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 3449872 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 203616 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 203616 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 127520 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 127520 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 127520 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 76096 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=279693399
+mem_heap_B=7608448
+mem_heap_extra_B=3803720
+mem_stacks_B=0
+heap_tree=detailed
+n3: 7608448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3803712 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 3591712 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 3591712 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 212000 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 212000 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 132752 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 132752 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 132752 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 79248 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 3803712 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 3591712 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 3591712 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 212000 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 212000 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 132752 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 132752 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 132752 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 79248 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=287448878
+mem_heap_B=8083952
+mem_heap_extra_B=4041472
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=293815245
+mem_heap_B=8447728
+mem_heap_extra_B=4223360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=302485064
+mem_heap_B=8673936
+mem_heap_extra_B=4336464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=308683692
+mem_heap_B=8920688
+mem_heap_extra_B=4459840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=316435715
+mem_heap_B=9340560
+mem_heap_extra_B=4669776
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=321375982
+mem_heap_B=9591152
+mem_heap_extra_B=4795072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=329604428
+mem_heap_B=10022096
+mem_heap_extra_B=5010544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=335140201
+mem_heap_B=10360880
+mem_heap_extra_B=5179936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=340282749
+mem_heap_B=10631040
+mem_heap_extra_B=5315016
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10631040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 5315008 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5018144 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5018144 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 296864 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 296864 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 186128 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 186128 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 186128 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 110736 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 5315008 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5018144 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5018144 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 296864 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 296864 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 186128 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 186128 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 186128 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 110736 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=346557185
+mem_heap_B=10956352
+mem_heap_extra_B=5477672
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10956352 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 5477664 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5171456 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5171456 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 306208 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 306208 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 191968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 191968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 191968 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 114240 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 5477664 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5171456 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5171456 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 306208 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 306208 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 191968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 191968 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 191968 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 114240 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=354782249
+mem_heap_B=11404416
+mem_heap_extra_B=5701704
+mem_stacks_B=0
+heap_tree=detailed
+n3: 11404416 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 5701696 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5383280 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5383280 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 318416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 318416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 199680 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 199680 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 199680 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 118736 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 5701696 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5383280 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5383280 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 318416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 318416 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 199680 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 199680 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 199680 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 118736 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=360478137
+mem_heap_B=11754816
+mem_heap_extra_B=5876904
+mem_stacks_B=0
+heap_tree=detailed
+n3: 11754816 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 5876896 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5548880 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5548880 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 328016 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 328016 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 205872 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 205872 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 205872 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 122144 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 5876896 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5548880 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5548880 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 328016 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 328016 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 205872 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 205872 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 205872 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 122144 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=368697702
+mem_heap_B=12232736
+mem_heap_extra_B=6115864
+mem_stacks_B=0
+heap_tree=detailed
+n3: 12232736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6115856 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5774160 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5774160 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 341696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 341696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 214688 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 214688 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 214688 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 127008 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6115856 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5774160 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5774160 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 341696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 341696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 214688 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 214688 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 214688 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 127008 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=375191043
+mem_heap_B=12481728
+mem_heap_extra_B=6240360
+mem_stacks_B=0
+heap_tree=detailed
+n3: 12481728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6240352 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5891792 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5891792 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 348560 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 348560 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 219200 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 219200 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 219200 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 129360 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6240352 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 5891792 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 5891792 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 348560 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 348560 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 219200 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 219200 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 219200 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 129360 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=383237869
+mem_heap_B=12719536
+mem_heap_extra_B=6359264
+mem_stacks_B=0
+heap_tree=detailed
+n3: 12719536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6359264 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6004112 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6004112 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 355152 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 355152 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 223408 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 223408 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 223408 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 131744 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6359248 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6004112 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6004112 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 355136 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 355136 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 223392 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 223392 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 223392 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 131744 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=388591941
+mem_heap_B=12992960
+mem_heap_extra_B=6495976
+mem_stacks_B=0
+heap_tree=detailed
+n3: 12992960 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6495968 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6133312 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6133312 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 362656 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 362656 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 228288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 228288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 228288 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 134368 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6495968 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6133312 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6133312 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 362656 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 362656 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 228288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 228288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 228288 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 134368 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=392836614
+mem_heap_B=13254560
+mem_heap_extra_B=6626776
+mem_stacks_B=0
+heap_tree=detailed
+n3: 13254560 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6626768 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6256480 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6256480 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 370288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 370288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 233296 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 233296 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 233296 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 136992 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6626768 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6256480 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6256480 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 370288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 370288 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 233296 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 233296 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 233296 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 136992 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=397493630
+mem_heap_B=13352272
+mem_heap_extra_B=6675632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=403645275
+mem_heap_B=13656768
+mem_heap_extra_B=6827880
+mem_stacks_B=0
+heap_tree=detailed
+n3: 13656768 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6827872 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6446176 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6446176 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 381696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 381696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 241056 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 241056 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 241056 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 140640 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6827872 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6446176 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6446176 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 381696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 381696 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 241056 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 241056 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 241056 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 140640 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=410516975
+mem_heap_B=14074624
+mem_heap_extra_B=7036808
+mem_stacks_B=0
+heap_tree=detailed
+n3: 14074624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 7036800 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6643472 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6643472 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 393328 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 393328 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 248400 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 248400 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 248400 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 144928 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 7036800 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6643472 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6643472 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 393328 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 393328 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 248400 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 248400 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 248400 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 144928 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=418791092
+mem_heap_B=14396496
+mem_heap_extra_B=7197744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=426068292
+mem_heap_B=14396496
+mem_heap_extra_B=7197744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=433345492
+mem_heap_B=14396496
+mem_heap_extra_B=7197744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=440622692
+mem_heap_B=14396496
+mem_heap_extra_B=7197744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=448186493
+mem_heap_B=14487088
+mem_heap_extra_B=7243040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=454278441
+mem_heap_B=14793984
+mem_heap_extra_B=7396488
+mem_stacks_B=0
+heap_tree=peak
+n3: 14793984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 7396480 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6982896 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6982896 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 413584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 413584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 261008 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 261008 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 261008 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 152576 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 7396480 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 6982896 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 6982896 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 413584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 413584 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 261008 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 261008 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 261008 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 152576 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=455297438
+mem_heap_B=14852896
+mem_heap_extra_B=7425944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=455443126
+mem_heap_B=14860400
+mem_heap_extra_B=7429696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=455588692
+mem_heap_B=14871632
+mem_heap_extra_B=7435312
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=455734173
+mem_heap_B=14879152
+mem_heap_extra_B=7439072
+mem_stacks_B=0
+heap_tree=detailed
+n3: 14879152 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 7439072 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 7023216 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 7023216 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 415856 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 415856 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 262592 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 262592 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 262592 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 153264 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 7439056 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 7023216 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 7023216 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 415840 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 415840 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 262576 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 262576 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 262576 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 153264 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=455879717
+mem_heap_B=14879152
+mem_heap_extra_B=7439072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=456025129
+mem_heap_B=14881728
+mem_heap_extra_B=7440360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=456170659
+mem_heap_B=14882736
+mem_heap_extra_B=7440864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=456316203
+mem_heap_B=14882736
+mem_heap_extra_B=7440864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=456461747
+mem_heap_B=14882736
+mem_heap_extra_B=7440864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=456607191
+mem_heap_B=14886224
+mem_heap_extra_B=7442608
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=456752793
+mem_heap_B=14888560
+mem_heap_extra_B=7443776
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=456898414
+mem_heap_B=14894000
+mem_heap_extra_B=7446496
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=457043829
+mem_heap_B=14902688
+mem_heap_extra_B=7450840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=457189431
+mem_heap_B=14903472
+mem_heap_extra_B=7451232
+mem_stacks_B=0
+heap_tree=detailed
+n3: 14903472 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 7451232 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 7034752 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 7034752 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 416480 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 416480 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 263040 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 263040 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 263040 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 153440 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 7451216 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 7034752 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 7034752 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 416464 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 416464 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 263024 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 263024 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 263024 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 153440 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=457334975
+mem_heap_B=14903472
+mem_heap_extra_B=7451232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=457480519
+mem_heap_B=14903472
+mem_heap_extra_B=7451232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=457625946
+mem_heap_B=14904544
+mem_heap_extra_B=7451768
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=457771390
+mem_heap_B=14908880
+mem_heap_extra_B=7453936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=457916811
+mem_heap_B=14913408
+mem_heap_extra_B=7456200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=458062265
+mem_heap_B=14915120
+mem_heap_extra_B=7457056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=458207822
+mem_heap_B=14916240
+mem_heap_extra_B=7457616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=458353413
+mem_heap_B=14916528
+mem_heap_extra_B=7457760
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=458498846
+mem_heap_B=14917120
+mem_heap_extra_B=7458056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=458981231
+mem_heap_B=14918168
+mem_heap_extra_B=7458360
+mem_stacks_B=0
+heap_tree=detailed
+n3: 14918168 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 7458336 0x109C6B: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 7041072 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 7041072 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 417264 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 417264 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 263648 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 263648 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 263648 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 153616 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 7458336 0x109C79: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 7041072 0x109E20: removeDeadEnds (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 7041072 0x1094E8: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n2: 417264 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 417264 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 263648 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 263648 0x109DCF: isDeadEnd (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 263648 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 153616 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1496 in 2 places, all below massif's threshold (1.00%)

@@ -143,32 +143,119 @@ void writeMazeToFile(char maze[][MAZE_SIZE_Y], char *filename, int rows) {
 }
 
 // Funkcja sprawdzająca, czy punkt jest ślepym zaułkiem
-int isDeadEnd(char maze[][MAZE_SIZE_Y], int x, int y) {
+void isDeadEnd(char maze[][MAZE_SIZE_Y], int x, int y) {
     int walls = 0;
-    
-    if (maze[x][y] == MAZE_WALL)
-        return 0;
+    if (maze[x][y]==MAZE_WALL)
+    {
+        return;
+    }
+    int currX=0;
+    int currY=0;    
+    // int * surrondingIndexesX = malloc(4*sizeof(int));
+    // int * surrondingIndexesY =  malloc(4*sizeof(int));
+    // // surrondingIndexesX={x-1,}
+    // surrondingIndexesX[0] = x - 1;
+    // surrondingIndexesX[1] = x + 1;
+    // surrondingIndexesX[2] = x;
+    // surrondingIndexesX[3] = x;
+    //  surrondingIndexesY[0] = y;
+    // surrondingIndexesY[1] = y;
+    // surrondingIndexesY[2] = y-1;
+    // surrondingIndexesY[3] = y+1;
+    // // int surrondingIndexesX[4] = {x-1,x+1,x,x};
+    // // int surrondingIndexesY[4] = {y,y,y-1,y+1};
+    // // int notWallIndex=0;
+    // for (int i = 0; i < 4; i++)
+    // {
+        
+    //     if (maze[surrondingIndexesX[i]][surrondingIndexesY[i]] != MAZE_WALL){
+    //         currX=surrondingIndexesX[i];
+    //         currY=surrondingIndexesY[i];
+    //     }
+    //     else{
+    //         walls++;
+    //     }
+    // }
+    if (maze[x-1][y] != MAZE_WALL){
+        
+        currX=x-1;
+        currY=y;      
+    } 
+    else{
+        walls++;
+    }
 
-    if (maze[x-1][y] == MAZE_WALL) walls++;
-    if (maze[x+1][y] == MAZE_WALL) walls++;
-    if (maze[x][y-1] == MAZE_WALL) walls++;
-    if (maze[x][y+1] == MAZE_WALL) walls++;
+    if (maze[x+1][y] != MAZE_WALL){
+        currX=x+1;
+        currY=y;
+        
+    } else{
+        walls++;
+    }
+    if (maze[x][y-1] != MAZE_WALL) {
+        currX=x;
+        currY=y-1;
+        
+    } else{
+        walls++;
+    }
+    if (maze[x][y+1] != MAZE_WALL) {
+        currX=x;
+        currY=y+1;
+       
+    } else{
+        walls++;
+    }
+    if (walls==3)
+    {
+        
+        maze[x][y]=MAZE_WALL;
+        // free(surrondingIndexesX);
+        // free(surrondingIndexesY);
+        isDeadEnd(maze,currX,currY);   
+
+        // return ;
+    }
+
+    // else{
+    //     return ;
+    // }
+    // return walls==3;
     
-    return walls >= 3;
+    // if (walls==3)
+    // {
+    //     maze[x][y] = MAZE_WALL;
+    //     for (int i = 0; i<4; i++)
+    //     {
+    //         isDeadEnd(maze,surrondingIndexesX[i],surrondingIndexesY[i]);
+    //     }
+    //     return 1;
+    // } 
+    // else{ 
+    //     return 0;
+    // }   
+    
 }
 
 // Funkcja usuwania ślepych zaułków z labiryntu
 void removeDeadEnds(char maze[][MAZE_SIZE_Y], int rows, int cols) {
-    int changed;
-    do {
-        changed = 0;
+    
         for (int i = 1; i < rows - 1; i++) {
             for (int j = 1; j < cols - 1; j++) {
-                if (isDeadEnd(maze, i, j)) {
-                    maze[i][j] = MAZE_WALL;
-                    changed = 1;
-                }
+                isDeadEnd(maze,i,j);
+                // changed= isDeadEnd(maze,i,j);
+                // if (maze[i][j]==MAZE_PATH)
+                // {
+                //     // if (isDeadEnd(maze, i, j)) {
+                //     //     maze[i][j] = MAZE_WALL;
+                //     //     changed = 1;
+                //     // }
+                    
+                // }
+                
             }
         }
-    } while (changed);
+    // do {
+    //     changed = 0;
+    // } while (changed);
 }
