@@ -16,7 +16,16 @@ int main()
 
     //  Graph *graph = initializeGraph(n);
     // printf("size %d",sizeof(node));
-    char test[2050][2050];
+    char maze[MAZE_SIZE_Y][MAZE_SIZE_X];
+    int rows = 0;
+    readMazeFromFile(maze, "dane/maze.txt");
+
+    while (maze[rows][0] != '\0')
+        rows++;
+
+    removeDeadEnds(maze, rows, MAZE_SIZE_Y);
+
+    writeMazeToFile(maze, "dane/maze_updated.txt", rows);
     // addEdgeToGraph(graph, 0, 1,1,1);
     // addEdgeToGraph(graph, 0, 2,1,1);
 
@@ -44,5 +53,5 @@ int main()
 //         printf("DFS Traversal: ");
 //         depthFirstSearch(graph, 2);
 //     }
-//     return 0;
+     return 0;
 }

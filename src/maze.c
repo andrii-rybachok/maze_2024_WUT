@@ -111,4 +111,64 @@ int getVerticesFromLines(char* top, char* middle, char* bot){
     
 }
 
+// Funkcja odczytująca labirynt z pliku do tablicy dwuwymiarowej
+void readMazeFromFile(char maze[][MAZE_SIZE_Y], char *filename) {
+    FILE *in = fopen(filename, "r");
+    if (in == NULL) {
+        printf("Error opening file.\n");
+        return;
+    }
+    
+    int row = 0;
+    while (fgets(maze[row], MAZE_SIZE_Y, in) != NULL) {
+        row++;
+    }
+    
+    fclose(in);
+}
 
+// Funkcja zapisu zaktualizowanej tablicy do pliku
+void writeMazeToFile(char maze[][MAZE_SIZE_Y], char *filename, int rows) {
+    FILE *fp = fopen(filename, "w");
+    if (fp == NULL) {
+        printf("Error opening file.\n");
+        return;
+    }
+    
+    for (int i = 0; i < rows; i++) {
+        fputs(maze[i], fp);
+    }
+    
+    fclose(fp);
+}
+
+// Funkcja sprawdzająca, czy punkt jest ślepym zaułkiem
+int isDeadEnd(char maze[][MAZE_SIZE_Y], int x, int y) {
+    int walls = 0;
+    
+    if (maze[x][y] == MAZE_WALL)
+        return 0;
+
+    if (maze[x-1][y] == MAZE_WALL) walls++;
+    if (maze[x+1][y] == MAZE_WALL) walls++;
+    if (maze[x][y-1] == MAZE_WALL) walls++;
+    if (maze[x][y+1] == MAZE_WALL) walls++;
+    
+    return walls >= 3;
+}
+
+// Funkcja usuwania ślepych zaułków z labiryntu
+void removeDeadEnds(char maze[][MAZE_SIZE_Y], int rows, int cols) {
+    int changed;
+    do {
+        changed = 0;
+        for (int i = 1; i < rows - 1; i++) {
+            for (int j = 1; j < cols - 1; j++) {
+                if (isDeadEnd(maze, i, j)) {
+                    maze[i][j] = MAZE_WALL;
+                    changed = 1;
+                }
+            }
+        }
+    } while (changed);
+}
