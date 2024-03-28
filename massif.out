@@ -12,7 +12,7 @@ heap_tree=empty
 #-----------
 snapshot=1
 #-----------
-time=143870
+time=147863
 mem_heap_B=472
 mem_heap_extra_B=16
 mem_stacks_B=0
@@ -20,7 +20,7 @@ heap_tree=empty
 #-----------
 snapshot=2
 #-----------
-time=144864
+time=148857
 mem_heap_B=4568
 mem_heap_extra_B=24
 mem_stacks_B=0
@@ -28,7 +28,7 @@ heap_tree=empty
 #-----------
 snapshot=3
 #-----------
-time=151724390
+time=151727940
 mem_heap_B=5592
 mem_heap_extra_B=32
 mem_stacks_B=0
@@ -36,11 +36,11 @@ heap_tree=empty
 #-----------
 snapshot=4
 #-----------
-time=151725828
+time=151729867
 mem_heap_B=5592
 mem_heap_extra_B=32
 mem_stacks_B=0
-heap_tree=peak
+heap_tree=detailed
 n2: 5592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
  n1: 5120 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
   n2: 5120 0x48E6CDF: _IO_doallocbuf (genops.c:347)
@@ -48,24 +48,24 @@ n2: 5592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
     n1: 4096 0x48E6D95: _IO_default_uflow (genops.c:362)
      n1: 4096 0x48C088A: __vfscanf_internal (vfscanf-internal.c:2767)
       n1: 4096 0x48BB21C: __isoc99_fscanf (isoc99_fscanf.c:30)
-       n1: 4096 0x1096AB: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-        n0: 4096 0x10945B: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n1: 4096 0x109B60: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n0: 4096 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
    n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
     n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
      n1: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
-      n1: 1024 0x48CE14C: outstring_func (vfprintf-internal.c:239)
-       n1: 1024 0x48CE14C: __vfprintf_internal (vfprintf-internal.c:1263)
+      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
         n1: 1024 0x48B979E: printf (printf.c:33)
-         n1: 1024 0x109990: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-          n0: 1024 0x10945B: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
  n1: 472 0x48D864D: __fopen_internal (iofopen.c:65)
   n1: 472 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
-   n1: 472 0x109653: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-    n0: 472 0x10945B: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n1: 472 0x109B08: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 472 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
 #-----------
 snapshot=5
 #-----------
-time=151725828
+time=151729867
 mem_heap_B=1496
 mem_heap_extra_B=24
 mem_stacks_B=0
@@ -73,7 +73,7 @@ heap_tree=empty
 #-----------
 snapshot=6
 #-----------
-time=151725959
+time=151729998
 mem_heap_B=1024
 mem_heap_extra_B=8
 mem_stacks_B=0
@@ -81,85 +81,377 @@ heap_tree=empty
 #-----------
 snapshot=7
 #-----------
-time=151726029
-mem_heap_B=1496
-mem_heap_extra_B=24
+time=151730054
+mem_heap_B=2054
+mem_heap_extra_B=26
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=8
 #-----------
-time=151726708
-mem_heap_B=5592
-mem_heap_extra_B=32
+time=151730091
+mem_heap_B=3084
+mem_heap_extra_B=44
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=9
 #-----------
-time=152239823
-mem_heap_B=1496
-mem_heap_extra_B=24
+time=151730151
+mem_heap_B=3556
+mem_heap_extra_B=60
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=10
 #-----------
-time=152239954
-mem_heap_B=1024
-mem_heap_extra_B=8
+time=151730764
+mem_heap_B=7652
+mem_heap_extra_B=68
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=11
 #-----------
-time=260806412
-mem_heap_B=1496
-mem_heap_extra_B=24
+time=182270862
+mem_heap_B=7652
+mem_heap_extra_B=68
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n4: 7652 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x48E6CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48E5CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n2: 4096 0x48E6D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x10953E: count_lines (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 4096 0x109776: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
+        n1: 1024 0x48B979E: printf (printf.c:33)
+         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n1: 472 0x48D864D: __fopen_internal (iofopen.c:65)
+  n2: 472 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n1: 472 0x1094FE: count_lines (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 472 0x109776: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
 #-----------
 snapshot=12
 #-----------
-time=260807166
-mem_heap_B=5592
-mem_heap_extra_B=32
+time=182270862
+mem_heap_B=3556
+mem_heap_extra_B=60
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=13
 #-----------
-time=261256165
-mem_heap_B=1496
-mem_heap_extra_B=24
+time=182270993
+mem_heap_B=3084
+mem_heap_extra_B=44
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=14
 #-----------
-time=261256296
-mem_heap_B=1024
-mem_heap_extra_B=8
+time=182271069
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=182271749
+mem_heap_B=7652
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=183010925
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=183011056
+mem_heap_B=3084
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=297044120
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=297044880
+mem_heap_B=7652
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=297493911
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=297494042
+mem_heap_B=3084
+mem_heap_extra_B=44
 mem_stacks_B=0
 heap_tree=detailed
-n2: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+n4: 3084 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
  n1: 1024 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
   n2: 1024 0x48E6CDF: _IO_doallocbuf (genops.c:347)
    n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
     n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
      n2: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
-      n1: 1024 0x48CE14C: outstring_func (vfprintf-internal.c:239)
-       n1: 1024 0x48CE14C: __vfprintf_internal (vfprintf-internal.c:1263)
+      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
         n1: 1024 0x48B979E: printf (printf.c:33)
-         n1: 1024 0x109990: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-          n0: 1024 0x10945B: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
       n0: 0 in 1 place, below massif's threshold (1.00%)
    n0: 0 in 1 place, below massif's threshold (1.00%)
  n0: 0 in 1 place, below massif's threshold (1.00%)
 #-----------
-snapshot=15
+snapshot=22
 #-----------
-time=261259023
+time=297494114
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=297494587
+mem_heap_B=4028
+mem_heap_extra_B=76
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=297495195
+mem_heap_B=8124
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=297495791
+mem_heap_B=12220
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=298129619
+mem_heap_B=12220
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=peak
+n4: 12220 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9216 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n3: 9216 0x48E6CDF: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 5120 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
+     n3: 5120 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 4096 0x48D8FD6: fwrite (iofwrite.c:39)
+       n1: 4096 0x109638: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n0: 4096 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
+        n1: 1024 0x48B979E: printf (printf.c:33)
+         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 4096 0x48E44C3: _IO_file_xsgetn (fileops.c:1287)
+    n1: 4096 0x48D8BA8: fread (iofread.c:38)
+     n1: 4096 0x10965B: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 4096 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n1: 944 0x48D864D: __fopen_internal (iofopen.c:65)
+  n3: 944 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n1: 472 0x10959D: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 472 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n1: 472 0x1095E0: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 472 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 0 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=298129619
+mem_heap_B=8124
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=298129750
+mem_heap_B=7652
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=298130119
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=298130250
+mem_heap_B=3084
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=298130323
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=298131317
+mem_heap_B=7652
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=344430030
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=344430161
+mem_heap_B=3084
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=344430235
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=344431229
+mem_heap_B=7652
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=detailed
+n4: 7652 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n3: 5120 0x48E6CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48E5CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n2: 4096 0x48E6D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48C088A: __vfscanf_internal (vfscanf-internal.c:2767)
+      n2: 4096 0x48BB21C: __isoc99_fscanf (isoc99_fscanf.c:30)
+       n2: 4096 0x109B60: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n0: 4096 0x1099D3: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+     n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
+     n2: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
+        n1: 1024 0x48B979E: printf (printf.c:33)
+         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n1: 472 0x48D864D: __fopen_internal (iofopen.c:65)
+  n2: 472 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n2: 472 0x109B08: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 472 0x1099D3: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=435771237
+mem_heap_B=3556
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=435771368
+mem_heap_B=3084
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=435771411
+mem_heap_B=2054
+mem_heap_extra_B=26
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=435771443
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=435774163
 mem_heap_B=0
 mem_heap_extra_B=0
 mem_stacks_B=0
