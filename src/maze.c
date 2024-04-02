@@ -1,5 +1,5 @@
 #include "maze.h"
-
+// 0 - wall, 1 - path
 
 // 0 - znak nad, 1 - znak z prawa , 2- znak pod, 3 - znak z lewa 
 // sprawdzamy czy punkt jest węzłem
@@ -21,7 +21,6 @@ int getCountOfVertices(char * fileName){
     char top[2050], middle[2050], bottom[2050];
     int countOfVertices=0;
     int linesCount=0;
-    int totalLines=0;
 
     //czytamy pierwsze 3 linii
     fscanf(fp, "%2050[^\n]%*c%2050[^\n]%*c%2050[^\n]%*c", top, middle, bottom);
@@ -73,60 +72,11 @@ int getCountOfVertices(char * fileName){
             break;
         }
     }
-    printf("%s: %d\n",fileName, countOfVertices);
 
     fclose(fp);
     return countOfVertices;
 }
 
-int getCountOfDeadEnds(char * fileName){
-    FILE *fp = fopen(fileName, "r");
-    char top[2050], middle[2050], bottom[2050];
-    int countOfEnds=0;
-    int linesCount=0;
-    int totalLines=0;
-
-    //czytamy pierwsze 3 linii
-    fscanf(fp, "%2050[^\n]%*c%2050[^\n]%*c%2050[^\n]%*c", top, middle, bottom);
-    countOfEnds += getDeadEndsFromLines(top,middle,bottom);
-    // tu zapisujemy średnią i niżną linię , które przeczytaliśmy z pliku
-    char  beforeMiddle[2050];
-    char  beforeBottom[2050];
-
-    strcpy(beforeMiddle, middle);
-    strcpy(beforeBottom,bottom);
-
-
-    while((linesCount= fscanf(fp, "%2050[^\n]%*c%2050[^\n]%*c%2050[^\n]%*c", top, middle, bottom))!=EOF){
-
-        switch (linesCount)
-        {
-            case 2:
-                countOfEnds += getDeadEndsFromLines(beforeMiddle,beforeBottom,top);
-                countOfEnds += getDeadEndsFromLines(beforeMiddle, top,middle);
-                break;
-            case 3:
-                // wykorzystujemy zeszłe linie żeby przeczytać przeszły dół
-                countOfEnds += getDeadEndsFromLines(beforeMiddle,beforeBottom,top);
-                // wykorzystujemy zeszłe linie żeby przeczytać terażniejszy top
-                countOfEnds += getDeadEndsFromLines(beforeBottom,top,middle);
-
-                countOfEnds += getDeadEndsFromLines(top,middle,bottom);
-                strcpy(beforeMiddle, middle);
-                strcpy(beforeBottom,bottom);
-                break;
-            case 1:
-                countOfEnds += getDeadEndsFromLines(beforeMiddle,beforeBottom,top);
-                break;
-        default:
-            break;
-        }
-    }
-    printf("%s: %d\n",fileName, countOfEnds);
-
-    fclose(fp);
-    return countOfEnds;
-}
 
 // w tej funkcji czytamy jednocześńie jakby 3 linie na raz i podajemy to sprawdzenia otoczenie przeczytanego jednego chara ( czyli char można wyobrazić jak osobę a otoczenie to wierzch,dół lewo i prawo w 2d)
 int getVerticesFromLines(char* top, char* middle, char* bot){
@@ -149,160 +99,172 @@ int getVerticesFromLines(char* top, char* middle, char* bot){
     return vertices;
     
 }
-int getDeadEndsFromLines(char* top, char* middle, char* bot){
-    int ends=0;
-       
-    for (int i = 0; middle[i]!= '\0'; i++)
-    {
-        if(middle[i]==MAZE_PATH){
 
-            int walls=0;
-            // tu podajemy otoczenie chara
-            char surronding[5] = {top[i],middle[i+1],bot[i],middle[i-1],'\0'};
 
-            for (int j = 0; j < 4; j++)
-            {
-                if (surronding[j]==MAZE_WALL)
-                {
-                    walls++;
-                }
-                
-            }
-            if (walls==3)
-            {
-                ends++;
-            }
-        }
-        
 
+void  SetBit(unsigned int A[],  int x ,int y )
+{
+
+    x+=MAZE_SIZE_X*y;
+    A[x/32] |= 1 << (x%32);
+}
+void  ClearBit(unsigned int A[],  int x ,int y )                
+{
+    x+=MAZE_SIZE_X*y;
+    A[x/32] &= ~(1 << (x%32));
+}
+int TestBit(unsigned int A[],  int x ,int y )
+{
+    x+=MAZE_SIZE_X*y;
+    return ( (A[x/32] & (1 << (x%32) )) != 0 ) ;     
+}
+
+int count_lines(char* fileName)
+{
+     FILE *file = fopen(fileName, "r");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return -1; // Return -1 to indicate error
     }
 
+    int count = 1;
+    char ch;
+    while ((ch = fgetc(file)) != EOF) {
+        if (ch == '\n') {
+            count++;
+        }
+    }
 
-    return ends;
-    
+    fclose(file);
+    return count;
+}
+int countCharsInFirstLine(const char *filename) {
+    FILE *file = fopen(filename, "r"); // Open file in read mode
+    if (file == NULL) {
+        printf("Unable to open file %s\n", filename);
+        return -1; // Error opening file
+    }
+
+    int count = 0;
+    int ch;
+    while ((ch = fgetc(file)) != EOF && ch != '\n') {
+        count++; // Increment count for each character until newline or EOF
+    }
+
+    fclose(file); // Close the file
+    return count;
+}
+cords getElemCords(char target,char* fileName ){
+    cords elCords;
+    int ch;
+    elCords.x=0;
+    elCords.y=0;
+    FILE* file = fopen(fileName,"r");
+    while ((ch = fgetc(file)) != EOF) {
+        if (ch == target) {
+            fclose(file);
+            return elCords;
+        }
+        if (ch == '\n') {
+            // Move to the next line
+            elCords.y++;
+            elCords.x=0; // Reset column count
+        } else {
+            elCords.x++;
+        }
+    }
+    elCords.x=-1;
+    elCords.y=-1;
+    fclose(file);
+    return elCords;
 }
 
 
-void removeDeadEndsFromLines(char* top, char* middle, char* bot){
-    for (int i = 1; middle[i+1]!= '\0'; i++)
-    {
-        int walls=0;
-        char surronding[] = {top[i],middle[i+1],bot[i],middle[i-1]};
-    // printf("lssss ");
+mazeParams initializeParams(char* originFileName,char* ourFileName){
 
-        for (int j = 0; j < 4; j++)
-        {
-            if (surronding[j]==MAZE_WALL)
-            {
-                walls++;
-            }
-            
-        }
-        if (walls>=3)
-        {
-            middle[i]=MAZE_WALL;
-        }
-    }
+    mazeParams params;
+    params.cols=count_lines(originFileName);
+    params.rows=countCharsInFirstLine(originFileName);
+    params.originFileName=originFileName;
+    params.ourFileName=ourFileName;
+    params.endCords = getElemCords(MAZE_END,originFileName);
+    params.startCords = getElemCords(MAZE_START,originFileName);
+
+    return params;
 }
+
+
+
 // Funkcja odczytująca labirynt z pliku do tablicy dwuwymiarowej
-int readMazeFromFile(char maze[][MAZE_SIZE_X], char *filename,int startRowIndex,char* firstLine,char* lastLine) {
-    FILE *in = fopen(filename, "r");
+int readMazeFromFile(unsigned int maze[], mazeParams params) {
+    FILE *in = fopen(params.originFileName, "r");
     if (in == NULL) {
         printf("Error opening file.\n");
         return;
     }
     
-    int currRow = 1;
-    int readLines = 0;
+    int currRow = 0;
 
-    char buff[MAZE_SIZE_X];
+    char buff[MAZE_SIZE_X+2];
 
-    while (currRow < startRowIndex && fgets(buff, sizeof(buff), in)) {
+    while (fgets(buff, MAZE_SIZE_X+2, in)) {
+      
+        for (int i = 0; buff[i]!='\0'; i++)
+        {
+            if(buff[i]==MAZE_PATH || buff[i]==MAZE_END || buff[i]==MAZE_START){
+                SetBit(maze,i,currRow);
 
-        if(firstLine!=NULL&&currRow+1==startRowIndex){
-            strcpy(firstLine,buff);
-        }
+            }
+        }     
         currRow++;
     }
-
-    while (readLines < MAZE_SIZE_Y && fgets(buff, MAZE_SIZE_X, in)!=NULL) {
-        strcpy(maze[readLines],buff);        
-        readLines++;
-
-    }
-    if (lastLine!=NULL&&fgets(buff, MAZE_SIZE_X, in)!=NULL)
-    {
-        strcpy(lastLine,buff);
-    }
+   
     fclose(in);
-    return currRow+readLines;
 
 }
 
 // Funkcja zapisu zaktualizowanej tablicy do pliku
-void writeMazeToFile(char maze[][MAZE_SIZE_X], char *filename, int startRowIndex,int fileRowSize) {
+void writeMazeToFile(unsigned int maze[],mazeParams params) {
     FILE * fp;
-    if (startRowIndex==1)
-    {
-        fp = fopen(filename, "w");
-    }
-    else{
-        fp = fopen(filename, "a");
-    }
+    fp = fopen(params.ourFileName, "w");
+   
 
     if (fp == NULL) {
         printf("Error opening file.\n");
         return;
     }
-    int rowsToRide = fileRowSize-startRowIndex>=MAZE_SIZE_Y?MAZE_SIZE_Y:(fileRowSize-startRowIndex+1);
-    
-    if(rowsToRide==0){
-        rowsToRide++;
-    }
-    for (int i = 0; i < rowsToRide ; i++) {
+    for (int i = 0; i < params.rows ; i++) {
         
-        fputs(maze[i], fp);
+        for (int j = 0; j < params.cols; j++)
+        {
+            if(i==params.startCords.y&&j==params.startCords.x){
+                fputc(MAZE_START,fp);
+            }
+            else if(i==params.endCords.y&&j==params.endCords.x){
+                fputc(MAZE_END,fp);
+            }
+            else if(TestBit(maze,j,i)){
+                fputc(MAZE_PATH, fp);
+            }
+            else{
+                fputc(MAZE_WALL,fp);
+            }
+        }
+        fputc('\n',fp);
     }
     fclose(fp);
 }
-int isEnd(char maze[][MAZE_SIZE_X], int x, int y){
-    int walls=0;
-    
-    if (maze[y][x]==MAZE_WALL)
-    {
-        return 0;
-    }
-    if (maze[y][x+1] == MAZE_WALL){
-        printf("1,%c ",maze[y][x+1]);
-        walls++;
-    }
-    if (maze[y][x-1] == MAZE_WALL){
-        printf("2,%c ",maze[y][x-1]);
 
-        walls++;
-    } 
-    if (maze[y-1][x] == MAZE_WALL) {
-        printf("3,%c ",maze[y-1][x]);
-
-        walls++;
-    }
-    if (maze[y+1][x] == MAZE_WALL) {
-        printf("4,%c ",maze[y+1][x]);
-
-       walls++;
-    }
-    return walls>=3;
-}
 // Funkcja sprawdzająca, czy punkt jest ślepym zaułkiem
-void isDeadEnd(char maze[][MAZE_SIZE_X], int x, int y) {
+void isDeadEnd(unsigned int maze[], int x, int y) {
     int walls = 0;
-    if (maze[y][x]==MAZE_WALL )
+    if (!TestBit(maze,x,y))
     {
         return;
     }
     int currX=0;
     int currY=0;    
-    if (maze[y][x-1] != MAZE_WALL){
+    if (TestBit(maze,x-1,y)){
         
         currX=x-1;
         currY=y;      
@@ -311,21 +273,21 @@ void isDeadEnd(char maze[][MAZE_SIZE_X], int x, int y) {
         walls++;
     }
 
-    if (maze[y][x+1] != MAZE_WALL){
+    if (TestBit(maze,x+1,y)){
         currX=x+1;
         currY=y;
         
     } else{
         walls++;
     }
-    if (maze[y-1][x] != MAZE_WALL) {
+    if (TestBit(maze,x,y-1)) {
         currX=x;
         currY=y-1;
         
     } else{
         walls++;
     }
-    if (maze[y+1][x] != MAZE_WALL) {
+    if (TestBit(maze,x,y+1)) {
         currX=x;
         currY=y+1;
        
@@ -334,7 +296,7 @@ void isDeadEnd(char maze[][MAZE_SIZE_X], int x, int y) {
     }
     if (walls>=3)
     {
-        maze[y][x]=MAZE_WALL;
+        ClearBit(maze,x,y);
         isDeadEnd(maze,currX,currY);   
     }
 
@@ -342,18 +304,297 @@ void isDeadEnd(char maze[][MAZE_SIZE_X], int x, int y) {
 }
 
 // Funkcja usuwania ślepych zaułków z labiryntu
-void removeDeadEnds(char maze[][MAZE_SIZE_X],char * firstLine,char* lastLine) {
-    for (int i = 1; i < MAZE_SIZE_Y && maze[i+1][0]!='\0'; i++) {                 
-        for (int j = 1; maze[i][j+1]!='\0'; j++) {
+void removeDeadEnds(unsigned int maze[],mazeParams params) {
+   
+    for (int i = 1; i < params.rows-1; i++) {                 
+        for (int j = 1; j<params.cols-1; j++) {
             isDeadEnd(maze,j,i);             
         }
+        
     }
-    if (firstLine!=NULL && strlen(firstLine)>1)
-    {
-        removeDeadEndsFromLines(firstLine,maze[0],maze[1]);
+    
+}
+
+
+//-1 - start, 0 - lewo, 1 - prawo, 2 - dół, 3 - góra 
+
+unsigned int availableDirections(unsigned int maze[],mazeParams params,cords moveCords){
+    unsigned int directions=0;
+    
+    if(moveCords.y+1<params.rows && TestBit(maze,moveCords.x,moveCords.y+1)){
+        SetBit(&directions,2,0);
     }
-    if (lastLine!=NULL && strlen(lastLine)>1)
+    if(moveCords.y-1<params.rows && TestBit(maze,moveCords.x,moveCords.y-1)){
+        SetBit(&directions,3,0);
+
+    }
+     if(moveCords.x-1<params.rows && TestBit(maze,moveCords.x-1,moveCords.y)){
+        SetBit(&directions,0,0);
+
+    }
+     if(moveCords.x+1<params.rows && TestBit(maze,moveCords.x+1,moveCords.y)){
+        SetBit(&directions,1,0);
+
+    }
+    return directions;
+}
+void makeStep(cords * moveCords,int direction){
+    switch (direction)
     {
-        removeDeadEndsFromLines(maze[MAZE_SIZE_Y-2],maze[MAZE_SIZE_Y-1],lastLine);
+    case 0:
+        moveCords->x--;
+        break;
+    case 1:
+        moveCords->x++;
+        break;
+    case 2:
+        moveCords->y++;
+        break;
+    case 3:
+        moveCords->y--;
+        break;
+    default:
+        break;
     }
 }
+int getAlternateDirection(int direction){
+    switch (direction)
+    {
+    case 0:
+        return 1;
+        break;
+    case 1:
+        return 0;
+        break;
+    case 2:
+        return 3;
+        break;
+    case 3:
+        return 2;
+        break;
+    default:
+        break;
+    }
+}
+int move(unsigned int maze[],mazeParams params,cords * moveCords,int * backDirection){
+   
+    int direction=-1;
+    int possibleDirections=0;
+
+    do
+    {
+        possibleDirections=0;
+        unsigned int directions=availableDirections(maze,params,*moveCords);
+        for (int i = 0; i < 4; i++)
+        {
+            if(i!=*backDirection && TestBit(&directions,i,0)){
+                // printf("i %d",i);
+                possibleDirections++;
+            }
+        }
+        // printf("x %d, y %d, d %d\n",moveCords->x,moveCords->y,possibleDirections);
+        if(possibleDirections==1 ){
+            if(direction==-1){
+                for (int i = 0; i < 4; i++)
+                {
+                    if(i!=*backDirection && TestBit(&directions,i,0)){
+                            makeStep(moveCords,i);
+                            direction=i;
+                            *backDirection=getAlternateDirection(direction);
+                        break;
+                    }
+                }
+            }
+            else if (!TestBit(&directions,direction,0)){
+                possibleDirections=0;
+            }
+            else{
+                makeStep(moveCords,direction);
+            }
+        }
+
+    } while (possibleDirections==1);
+    
+    
+    return direction; 
+}
+int getBits(int * a ,int length){
+    int count=0;
+    for (int i = 0; i < length; i++)
+    {
+        if(TestBit(a,i,0)){
+            count++;
+        }
+    }
+    return count;
+}
+
+int goByPath(unsigned int maze[],mazeParams * params,node ** head,cords  currentCords,int backDirection,int isStart){
+
+    cords tmp = currentCords;
+    int direction = move(maze,*(params),&currentCords,&backDirection);
+    // printf("direction: %d backdirection %d \n",direction,backDirection);
+    int steps= abs(tmp.x-currentCords.x)!=0?abs(tmp.x-currentCords.x):abs(tmp.y-currentCords.y);
+
+    if(params->endCords.x==currentCords.x && currentCords.y==params->endCords.y){
+        
+        // printf("finish \n\n");
+        push_back(head,steps+1,getAlternateDirection(backDirection));
+        // show(*head);
+        int listSteps=getListSteps(*head);
+        if(listSteps<params->minSteps || params->minSteps==0){
+            params->minSteps=listSteps;
+        }
+        pop_back(head);
+
+        return 1;
+    }
+    if(direction==-1){
+        // printf("dead \n");
+        // pop_back(head);
+
+        return 0;
+    }
+    // printf("xx %d, y %d \n",abs(tmp.x-moveCords->x),tmp.y);
+
+    push_back(head,steps+1,direction);
+  
+    unsigned int directions=availableDirections( maze, *(params),currentCords);
+    if(isStart==0 && getBits(&directions,4)>2){
+        // printf("start, x %d, y %d \n",currentCords.x,currentCords.y);
+        isStart=1;
+    }
+    else if ( isStart==1 && getBits(&directions,4)>2){
+        // printf("!start, x %d, y %d \n",currentCords.x,currentCords.y);
+
+        isStart=0;
+    }
+    int isWining=0;
+    for (int i = 3; i >= 0; i--)
+    {
+        if(i!=backDirection && TestBit(&directions,i,0)){
+        // printf("iii %d \n",i);
+            // printf("i %d\n",i);
+            tmp = currentCords;
+            ClearBit(maze,currentCords.x,currentCords.y);
+                    // printf("current cords x : %d, y: %d iii %d backDirection %d\n",currentCords.x,currentCords.y,i,backDirection);
+
+            // makeStep(&tmp,backDirection);
+
+            // if(tmp.x!=params.endCords.x || tmp.y!=params.endCords.y){
+            //     ClearBit(maze,tmp.x,tmp.y);
+            // }
+
+            // tmp = currentCords;
+            makeStep(&tmp,i);
+            // if(tmp.x!=params.endCords.x || tmp.y!=params.endCords.y){
+            //     ClearBit(maze,tmp.x,tmp.y);
+            // }
+            //         printMaze(maze,params);
+
+            // tmp = currentCords;
+            // makeStep(&tmp,getAlternateDirection(i));
+            // if(tmp.x!=params.endCords.x && tmp.y!=params.endCords.y){
+            //     ClearBit(maze,tmp.x,tmp.y);
+            // }
+            // printMaze(maze,params);
+            goByPath(maze,params,head,tmp,getAlternateDirection(i),isStart);
+            // if(){
+            //     unsigned int localDirs = availableDirections(maze,params,currentCords);              
+            //     if(getBits(&localDirs,4)>1){
+            //         SetBit(maze,currentCords.x,currentCords.y);
+            //         tmp = currentCords;
+            //         if(isStart){
+            //             printf("!start, x %d, y %d \n",currentCords.x,currentCords.y);
+            //             makeStep(&tmp,i);
+            //             // isStart=0;
+            //         }
+            //         else{
+            //              printf("start, x %d, y %d \n",currentCords.x,currentCords.y);
+            //             // isStart=1;
+            //             makeStep(&tmp,backDirection);
+            //         }
+            //         ClearBit(maze,tmp.x,tmp.y);
+            //         // return 1;
+            //     }
+            //     else{
+            //         SetBit(maze,currentCords.x,currentCords.y);
+
+            //     }
+            //     isWining=1;
+            //     // printf("backdirection %d, cur x %d, y %d, start %d \n",backDirection,currentCords.x,currentCords.y,isStart);
+
+            //     // else{
+            //     //     SetBit(maze,currentCords.x,currentCords.y);
+
+            //     // }
+                
+            // }
+                SetBit(maze,currentCords.x,currentCords.y);
+            // else{
+            //     // isWining=0;
+            //         // printMaze(maze,params);
+
+            //     // tmp = currentCords;
+            //     // makeStep(&tmp,backDirection);
+            //     // SetBit(maze,tmp.x,tmp.y);
+            //     // tmp = currentCords;
+            //     // makeStep(&tmp,i);
+            //     // SetBit(maze,tmp.x,tmp.y);
+
+            //     // printf("bef x : %d, y: %d \n",tmp.x,tmp.y);
+            //     // printf("x : %d, y: %d \n",tmp.x,tmp.y);
+            //     // // printMaze(maze,params);
+            // }
+                //     printMaze(maze,params);
+                // printf("\n");
+            
+        }
+    }
+    pop_back(head);
+    // printf("lol  x : %d, y: %d backDirection %d\n",currentCords.x,currentCords.y,backDirection);
+    // printf("lol\n");
+    return isWining;
+}   
+void printMaze(unsigned int maze[],mazeParams params){
+    for (int i = 0; i < params.rows; i++) {                 
+        for (int j = 0; j<params.cols; j++) {
+            if(TestBit(maze,j,i)){
+                printf(" ");
+            }            
+            else{
+                printf("X");
+            }
+        }
+        printf("\n");
+    }
+}
+void findSolution(unsigned int maze[],mazeParams * params){
+
+    params->minSteps=0;
+ 
+    node* head = NULL;
+    // head->vertexNumber=currVertexNumber;
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     head->nodes[i]=NULL;
+    // }
+    goByPath(maze,params,&head,params->startCords,-1,0);
+        // show(head);
+
+    writeMazeToFile(maze,*(params));
+    printf("min steps %d",params->minSteps);
+    //  moveCords.x=3;
+    // moveCords.y=1;
+    // unsigned int localDirs = availableDirections(maze,params,moveCords);
+    // for (int i = 3; i >= 0; i--)
+    // {
+        
+    //     if(TestBit(&localDirs,i,0)){
+    //         printf("%d,",i);
+    //     }
+    // }
+    // printf("\n");
+    
+}
+

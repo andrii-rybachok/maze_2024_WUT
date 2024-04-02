@@ -42,12 +42,12 @@ void addEdgeToGraph(Graph *graph, int source, int destination, int countOfSteps,
 
     graph->adjacencyLists = malloc(vertices * sizeof(node *));
 
-    // graph->visitedRecord = malloc(vertices * sizeof(int));
+    graph->visitedRecord = malloc(vertices * sizeof(int));
 
     for (i = 0; i < vertices; i++)
     {
         graph->adjacencyLists[i] = NULL;
-        // graph->visitedRecord[i] = 0;
+        graph->visitedRecord[i] = 0;
     }
 
     return graph;
@@ -55,20 +55,20 @@ void addEdgeToGraph(Graph *graph, int source, int destination, int countOfSteps,
 
 void depthFirstSearch( Graph *graph, int vertexNumber)
 {
-    //  node *adjList = graph->adjacencyLists[vertexNumber];
-    //  node *temp = adjList;
+     node *adjList = graph->adjacencyLists[vertexNumber];
+     node *temp = adjList;
 
-    // graph->visitedRecord[vertexNumber] = 1;
-    // printf("%d ", vertexNumber);
+    graph->visitedRecord[vertexNumber] = 1;
+    printf("%d ", vertexNumber);
 
-    // while (temp != NULL)
-    // {
-    //     int connectedVertex = temp->vertexNumber;
+    while (temp != NULL)
+    {
+        int connectedVertex = temp->vertexNumber;
 
-    //     if (graph->visitedRecord[connectedVertex] == 0)
-    //     {
-    //         depthFirstSearch(graph, connectedVertex);
-    //     }
-    //     temp = temp->nextVertex;
-    // }
+        if (graph->visitedRecord[connectedVertex] == 0)
+        {
+            depthFirstSearch(graph, connectedVertex);
+        }
+        temp = temp->nextVertex;
+    }
 }

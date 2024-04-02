@@ -12,447 +12,2033 @@ heap_tree=empty
 #-----------
 snapshot=1
 #-----------
-time=147863
-mem_heap_B=472
-mem_heap_extra_B=16
-mem_stacks_B=0
-heap_tree=empty
-#-----------
-snapshot=2
-#-----------
-time=148857
+time=31506479
 mem_heap_B=4568
 mem_heap_extra_B=24
 mem_stacks_B=0
 heap_tree=empty
 #-----------
+snapshot=2
+#-----------
+time=68321393
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
 snapshot=3
 #-----------
-time=151727940
-mem_heap_B=5592
-mem_heap_extra_B=32
+time=92218762
+mem_heap_B=0
+mem_heap_extra_B=0
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=4
 #-----------
-time=151729867
-mem_heap_B=5592
-mem_heap_extra_B=32
-mem_stacks_B=0
-heap_tree=detailed
-n2: 5592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 5120 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
-  n2: 5120 0x48E6CDF: _IO_doallocbuf (genops.c:347)
-   n1: 4096 0x48E5CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
-    n1: 4096 0x48E6D95: _IO_default_uflow (genops.c:362)
-     n1: 4096 0x48C088A: __vfscanf_internal (vfscanf-internal.c:2767)
-      n1: 4096 0x48BB21C: __isoc99_fscanf (isoc99_fscanf.c:30)
-       n1: 4096 0x109B60: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-        n0: 4096 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-   n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
-    n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
-     n1: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
-      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
-       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
-        n1: 1024 0x48B979E: printf (printf.c:33)
-         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n1: 472 0x48D864D: __fopen_internal (iofopen.c:65)
-  n1: 472 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
-   n1: 472 0x109B08: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-    n0: 472 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-#-----------
-snapshot=5
-#-----------
-time=151729867
-mem_heap_B=1496
-mem_heap_extra_B=24
+time=165004403
+mem_heap_B=472
+mem_heap_extra_B=16
 mem_stacks_B=0
 heap_tree=empty
 #-----------
+snapshot=5
+#-----------
+time=165005039
+mem_heap_B=4568
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4096 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 4096 0x48E6CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 4096 0x10A28F: writeMazeToFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n0: 4096 0x109741: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48D864D: __fopen_internal (iofopen.c:65)
+  n2: 472 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n1: 472 0x10A1D6: writeMazeToFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 472 0x109741: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n0: 0 in 4 places, all below massif's threshold (1.00%)
+#-----------
 snapshot=6
 #-----------
-time=151729998
-mem_heap_B=1024
-mem_heap_extra_B=8
+time=247077903
+mem_heap_B=472
+mem_heap_extra_B=16
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=7
 #-----------
-time=151730054
-mem_heap_B=2054
-mem_heap_extra_B=26
+time=273778158
+mem_heap_B=38784
+mem_heap_extra_B=19392
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=8
 #-----------
-time=151730091
-mem_heap_B=3084
-mem_heap_extra_B=44
+time=291585878
+mem_heap_B=51584
+mem_heap_extra_B=25792
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=9
 #-----------
-time=151730151
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=313900566
+mem_heap_B=64384
+mem_heap_extra_B=32192
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=10
 #-----------
-time=151730764
-mem_heap_B=7652
-mem_heap_extra_B=68
+time=340692038
+mem_heap_B=77184
+mem_heap_extra_B=38592
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=11
 #-----------
-time=182270862
-mem_heap_B=7652
-mem_heap_extra_B=68
+time=371938390
+mem_heap_B=89984
+mem_heap_extra_B=44992
 mem_stacks_B=0
-heap_tree=detailed
-n4: 7652 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 5120 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
-  n2: 5120 0x48E6CDF: _IO_doallocbuf (genops.c:347)
-   n1: 4096 0x48E5CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
-    n2: 4096 0x48E6D95: _IO_default_uflow (genops.c:362)
-     n1: 4096 0x10953E: count_lines (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-      n0: 4096 0x109776: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-     n0: 0 in 1 place, below massif's threshold (1.00%)
-   n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
-    n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
-     n1: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
-      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
-       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
-        n1: 1024 0x48B979E: printf (printf.c:33)
-         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n1: 472 0x48D864D: __fopen_internal (iofopen.c:65)
-  n2: 472 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
-   n1: 472 0x1094FE: count_lines (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-    n0: 472 0x109776: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-   n0: 0 in 1 place, below massif's threshold (1.00%)
+heap_tree=empty
 #-----------
 snapshot=12
 #-----------
-time=182270862
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=407646874
+mem_heap_B=102784
+mem_heap_extra_B=51392
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=13
 #-----------
-time=182270993
-mem_heap_B=3084
-mem_heap_extra_B=44
+time=427226298
+mem_heap_B=109184
+mem_heap_extra_B=54592
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=14
 #-----------
-time=182271069
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=447892334
+mem_heap_B=115584
+mem_heap_extra_B=57792
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=15
 #-----------
-time=182271749
-mem_heap_B=7652
-mem_heap_extra_B=68
+time=478119667
+mem_heap_B=124384
+mem_heap_extra_B=62192
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=16
 #-----------
-time=183010925
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=513508531
+mem_heap_B=133984
+mem_heap_extra_B=66992
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=17
 #-----------
-time=183011056
-mem_heap_B=3084
-mem_heap_extra_B=44
+time=532180705
+mem_heap_B=138784
+mem_heap_extra_B=69392
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=18
 #-----------
-time=297044120
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=551477271
+mem_heap_B=143584
+mem_heap_extra_B=71792
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=19
 #-----------
-time=297044880
-mem_heap_B=7652
-mem_heap_extra_B=68
+time=571394141
+mem_heap_B=148384
+mem_heap_extra_B=74192
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=20
 #-----------
-time=297493911
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=591961411
+mem_heap_B=153184
+mem_heap_extra_B=76592
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=21
 #-----------
-time=297494042
-mem_heap_B=3084
-mem_heap_extra_B=44
+time=613131589
+mem_heap_B=157984
+mem_heap_extra_B=78992
 mem_stacks_B=0
-heap_tree=detailed
-n4: 3084 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n1: 1024 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
-  n2: 1024 0x48E6CDF: _IO_doallocbuf (genops.c:347)
-   n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
-    n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
-     n2: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
-      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
-       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
-        n1: 1024 0x48B979E: printf (printf.c:33)
-         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-      n0: 0 in 1 place, below massif's threshold (1.00%)
-   n0: 0 in 1 place, below massif's threshold (1.00%)
- n0: 0 in 1 place, below massif's threshold (1.00%)
+heap_tree=empty
 #-----------
 snapshot=22
 #-----------
-time=297494114
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=642333133
+mem_heap_B=164384
+mem_heap_extra_B=82192
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=23
 #-----------
-time=297494587
-mem_heap_B=4028
-mem_heap_extra_B=76
+time=672683069
+mem_heap_B=170784
+mem_heap_extra_B=85392
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=24
 #-----------
-time=297495195
-mem_heap_B=8124
-mem_heap_extra_B=84
+time=704129517
+mem_heap_B=177184
+mem_heap_extra_B=88592
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=25
 #-----------
-time=297495791
-mem_heap_B=12220
-mem_heap_extra_B=92
+time=736718049
+mem_heap_B=183584
+mem_heap_extra_B=91792
 mem_stacks_B=0
 heap_tree=empty
 #-----------
 snapshot=26
 #-----------
-time=298129619
-mem_heap_B=12220
-mem_heap_extra_B=92
+time=753445205
+mem_heap_B=186784
+mem_heap_extra_B=93392
 mem_stacks_B=0
-heap_tree=peak
-n4: 12220 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 9216 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
-  n3: 9216 0x48E6CDF: _IO_doallocbuf (genops.c:347)
-   n1: 5120 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
-    n1: 5120 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
-     n3: 5120 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
-      n1: 4096 0x48D8FD6: fwrite (iofwrite.c:39)
-       n1: 4096 0x109638: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-        n0: 4096 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
-       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
-        n1: 1024 0x48B979E: printf (printf.c:33)
-         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-      n0: 0 in 1 place, below massif's threshold (1.00%)
-   n1: 4096 0x48E44C3: _IO_file_xsgetn (fileops.c:1287)
-    n1: 4096 0x48D8BA8: fread (iofread.c:38)
-     n1: 4096 0x10965B: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-      n0: 4096 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-   n0: 0 in 1 place, below massif's threshold (1.00%)
- n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n1: 944 0x48D864D: __fopen_internal (iofopen.c:65)
-  n3: 944 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
-   n1: 472 0x10959D: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-    n0: 472 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-   n1: 472 0x1095E0: copyFile (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-    n0: 472 0x10989A: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-   n0: 0 in 4 places, all below massif's threshold (1.00%)
+heap_tree=empty
 #-----------
 snapshot=27
 #-----------
-time=298129619
-mem_heap_B=8124
-mem_heap_extra_B=84
+time=778282998
+mem_heap_B=191408
+mem_heap_extra_B=95704
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=peak
+n2: 191408 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 191392 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 191376 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 191376 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 191360 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 191344 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 191328 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 191312 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 191296 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 191280 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 191264 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 191248 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 191232 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 191216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 191200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 191184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 191168 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 191152 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 191136 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 191120 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 191104 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 191088 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 191072 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 191056 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 191040 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 191024 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 191008 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 190992 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 190976 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 190960 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 190944 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 16 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=28
 #-----------
-time=298129750
-mem_heap_B=7652
-mem_heap_extra_B=68
+time=812270224
+mem_heap_B=185632
+mem_heap_extra_B=92816
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 185632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 185616 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 185616 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 185616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 185600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 185584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 185568 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 185552 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 185536 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 185520 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 185504 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 185488 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 185472 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 185456 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 185440 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 185424 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 185408 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 185392 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 185376 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 185360 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 185344 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 185328 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 185312 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 185296 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 185280 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 185264 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 185248 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 185232 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 185216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 185200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 185184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=29
 #-----------
-time=298130119
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=830704094
+mem_heap_B=182432
+mem_heap_extra_B=91216
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 182432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 182416 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 182416 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 182416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 182400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 182384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 182368 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 182352 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 182336 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 182320 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 182304 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 182288 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 182272 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 182256 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 182240 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 182224 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 182208 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 182192 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 182176 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 182160 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 182144 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 182128 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 182112 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 182096 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 182080 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 182064 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 182048 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 182032 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 182016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 182000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 181984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=30
 #-----------
-time=298130250
-mem_heap_B=3084
-mem_heap_extra_B=44
+time=848817635
+mem_heap_B=179232
+mem_heap_extra_B=89616
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 179232 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 179216 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 179216 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 179216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 179200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 179184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 179168 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 179152 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 179136 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 179120 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 179104 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 179088 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 179072 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 179056 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 179040 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 179024 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 179008 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 178992 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 178976 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 178960 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 178944 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 178928 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 178912 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 178896 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 178880 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 178864 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 178848 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 178832 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 178816 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 178800 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 178784 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=31
 #-----------
-time=298130323
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=866611317
+mem_heap_B=176032
+mem_heap_extra_B=88016
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 176032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 176016 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 176016 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 176016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 176000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 175984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 175968 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 175952 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 175936 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 175920 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 175904 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 175888 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 175872 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 175856 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 175840 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 175824 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 175808 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 175792 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 175776 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 175760 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 175744 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 175728 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 175712 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 175696 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 175680 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 175664 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 175648 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 175632 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 175616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 175600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 175584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=32
 #-----------
-time=298131317
-mem_heap_B=7652
-mem_heap_extra_B=68
+time=888404148
+mem_heap_B=172032
+mem_heap_extra_B=86016
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 172032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 172016 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 172016 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 172016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 172000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 171984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 171968 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 171952 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 171936 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 171920 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 171904 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 171888 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 171872 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 171856 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 171840 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 171824 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 171808 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 171792 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 171776 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 171760 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 171744 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 171728 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 171712 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 171696 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 171680 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 171664 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 171648 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 171632 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 171616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 171600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 171584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=33
 #-----------
-time=344430030
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=909696697
+mem_heap_B=168032
+mem_heap_extra_B=84016
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 168032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 168016 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 168016 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 168016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 168000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 167984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 167968 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 167952 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 167936 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 167920 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 167904 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 167888 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 167872 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 167856 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 167840 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 167824 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 167808 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 167792 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 167776 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 167760 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 167744 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 167728 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 167712 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 167696 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 167680 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 167664 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 167648 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 167632 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 167616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 167600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 167584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=34
 #-----------
-time=344430161
-mem_heap_B=3084
-mem_heap_extra_B=44
+time=930488917
+mem_heap_B=164032
+mem_heap_extra_B=82016
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 164032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 164016 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 164016 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 164016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 164000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 163984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 163968 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 163952 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 163936 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 163920 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 163904 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 163888 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 163872 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 163856 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 163840 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 163824 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 163808 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 163792 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 163776 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 163760 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 163744 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 163728 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 163712 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 163696 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 163680 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 163664 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 163648 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 163632 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 163616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 163600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 163584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=35
 #-----------
-time=344430235
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=954778594
+mem_heap_B=159232
+mem_heap_extra_B=79616
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 159232 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 159216 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 159216 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 159216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 159200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 159184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 159168 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 159152 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 159136 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 159120 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 159104 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 159088 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 159072 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 159056 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 159040 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 159024 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 159008 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 158992 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 158976 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 158960 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 158944 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 158928 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 158912 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 158896 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 158880 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 158864 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 158848 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 158832 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 158816 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 158800 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 158784 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=36
 #-----------
-time=344431229
-mem_heap_B=7652
-mem_heap_extra_B=68
+time=978348835
+mem_heap_B=154432
+mem_heap_extra_B=77216
 mem_stacks_B=0
 heap_tree=detailed
-n4: 7652 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 5120 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
-  n3: 5120 0x48E6CDF: _IO_doallocbuf (genops.c:347)
-   n1: 4096 0x48E5CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
-    n2: 4096 0x48E6D95: _IO_default_uflow (genops.c:362)
-     n1: 4096 0x48C088A: __vfscanf_internal (vfscanf-internal.c:2767)
-      n2: 4096 0x48BB21C: __isoc99_fscanf (isoc99_fscanf.c:30)
-       n2: 4096 0x109B60: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-        n0: 4096 0x1099D3: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-        n0: 0 in 1 place, below massif's threshold (1.00%)
-       n0: 0 in 1 place, below massif's threshold (1.00%)
-     n0: 0 in 2 places, all below massif's threshold (1.00%)
-   n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
-    n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
-     n2: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
-      n1: 1024 0x48D000B: outstring_func (vfprintf-internal.c:239)
-       n1: 1024 0x48D000B: __vfprintf_internal (vfprintf-internal.c:1517)
-        n1: 1024 0x48B979E: printf (printf.c:33)
-         n1: 1024 0x109E4D: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-          n0: 1024 0x1096EB: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-      n0: 0 in 2 places, all below massif's threshold (1.00%)
-   n0: 0 in 1 place, below massif's threshold (1.00%)
- n0: 1030 0x109752: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n0: 1030 0x109763: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
- n1: 472 0x48D864D: __fopen_internal (iofopen.c:65)
-  n2: 472 0x48D864D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
-   n2: 472 0x109B08: getCountOfVertices (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-    n0: 472 0x1099D3: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
-    n0: 0 in 1 place, below massif's threshold (1.00%)
-   n0: 0 in 6 places, all below massif's threshold (1.00%)
+n2: 154432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 154416 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 154416 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 154416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 154400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 154384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 154368 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 154352 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 154336 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 154320 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 154304 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 154288 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 154272 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 154256 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 154240 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 154224 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 154208 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 154192 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 154176 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 154160 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 154144 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 154128 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 154112 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 154096 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 154080 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 154064 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 154048 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 154032 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 154016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 154000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 153984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=37
 #-----------
-time=435771237
-mem_heap_B=3556
-mem_heap_extra_B=60
+time=1004937332
+mem_heap_B=148832
+mem_heap_extra_B=74416
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 148832 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 148816 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 148816 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 148816 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 148800 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 148784 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 148768 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 148752 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 148736 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 148720 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 148704 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 148688 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 148672 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 148656 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 148640 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 148624 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 148608 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 148592 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 148576 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 148560 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 148544 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 148528 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 148512 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 148496 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 148480 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 148464 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 148448 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 148432 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 148416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 148400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 148384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=38
 #-----------
-time=435771368
-mem_heap_B=3084
-mem_heap_extra_B=44
+time=1034124837
+mem_heap_B=142432
+mem_heap_extra_B=71216
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 142432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 142416 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 142416 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 142416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 142400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 142384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 142368 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 142352 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 142336 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 142320 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 142304 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 142288 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 142272 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 142256 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 142240 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 142224 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 142208 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 142192 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 142176 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 142160 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 142144 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 142128 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 142112 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 142096 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 142080 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 142064 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 142048 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 142032 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 142016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 142000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 141984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=39
 #-----------
-time=435771411
-mem_heap_B=2054
-mem_heap_extra_B=26
+time=1062032060
+mem_heap_B=136032
+mem_heap_extra_B=68016
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 136032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 136016 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 136016 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 136016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 136000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 135984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 135968 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 135952 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 135936 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 135920 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 135904 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 135888 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 135872 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 135856 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 135840 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 135824 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 135808 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 135792 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 135776 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 135760 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 135744 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 135728 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 135712 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 135696 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 135680 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 135664 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 135648 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 135632 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 135616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 135600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 135584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=40
 #-----------
-time=435771443
-mem_heap_B=1024
-mem_heap_extra_B=8
+time=1091897351
+mem_heap_B=128832
+mem_heap_extra_B=64416
 mem_stacks_B=0
-heap_tree=empty
+heap_tree=detailed
+n2: 128832 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 128816 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 128816 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 128816 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 128800 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 128784 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 128768 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 128752 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 128736 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 128720 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 128704 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 128688 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 128672 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 128656 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 128640 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 128624 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 128608 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 128592 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 128576 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 128560 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 128544 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 128528 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 128512 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 128496 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 128480 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 128464 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 128448 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 128432 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 128416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 128400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 128384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=41
 #-----------
-time=435774163
-mem_heap_B=0
-mem_heap_extra_B=0
+time=1120143206
+mem_heap_B=121632
+mem_heap_extra_B=60816
+mem_stacks_B=0
+heap_tree=detailed
+n2: 121632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 121616 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 121616 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 121616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 121600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 121584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 121568 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 121552 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 121536 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 121520 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 121504 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 121488 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 121472 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 121456 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 121440 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 121424 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 121408 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 121392 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 121376 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 121360 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 121344 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 121328 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 121312 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 121296 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 121280 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 121264 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 121248 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 121232 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 121216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 121200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 121184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=1149626001
+mem_heap_B=113632
+mem_heap_extra_B=56816
+mem_stacks_B=0
+heap_tree=detailed
+n2: 113632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 113616 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 113616 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 113616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 113600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 113584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 113568 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 113552 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 113536 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 113520 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 113504 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 113488 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 113472 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 113456 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 113440 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 113424 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 113408 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 113392 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 113376 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 113360 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 113344 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 113328 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 113312 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 113296 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 113280 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 113264 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 113248 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 113232 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 113216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 113200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 113184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=1179747334
+mem_heap_B=104832
+mem_heap_extra_B=52416
+mem_stacks_B=0
+heap_tree=detailed
+n2: 104832 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 104816 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 104816 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 104816 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 104800 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 104784 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 104768 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 104752 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 104736 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 104720 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 104704 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 104688 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 104672 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 104656 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 104640 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 104624 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 104608 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 104592 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 104576 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 104560 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 104544 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 104528 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 104512 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 104496 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 104480 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 104464 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 104448 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 104432 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 104416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 104400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 104384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=1209846406
+mem_heap_B=95232
+mem_heap_extra_B=47616
+mem_stacks_B=0
+heap_tree=detailed
+n2: 95232 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 95216 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 95216 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 95216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 95200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 95184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 95168 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 95152 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 95136 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 95120 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 95104 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 95088 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 95072 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 95056 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 95040 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 95024 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 95008 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 94992 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 94976 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 94960 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 94944 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 94928 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 94912 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 94896 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 94880 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 94864 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 94848 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 94832 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 94816 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 94800 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 94784 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=1241322742
+mem_heap_B=84032
+mem_heap_extra_B=42016
+mem_stacks_B=0
+heap_tree=detailed
+n2: 84032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 84016 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 84016 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 84016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 84000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 83984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 83968 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 83952 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 83936 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 83920 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 83904 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 83888 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 83872 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 83856 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 83840 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 83824 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 83808 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 83792 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 83776 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 83760 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 83744 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 83728 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 83712 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 83696 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 83680 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 83664 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 83648 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 83632 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 83616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 83600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 83584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=1274273517
+mem_heap_B=70432
+mem_heap_extra_B=35216
+mem_stacks_B=0
+heap_tree=detailed
+n2: 70432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 70416 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 70416 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 70416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 70400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 70384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 70368 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 70352 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 70336 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 70320 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 70304 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 70288 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 70272 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 70256 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 70240 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 70224 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 70208 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 70192 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 70176 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 70160 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 70144 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 70128 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 70112 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 70096 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 70080 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 70064 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 70048 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 70032 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 70016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 70000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 69984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=1309654909
+mem_heap_B=52032
+mem_heap_extra_B=26016
+mem_stacks_B=0
+heap_tree=detailed
+n2: 52032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 52016 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 52016 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 52016 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 52000 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 51984 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 51968 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 51952 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 51936 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 51920 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 51904 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 51888 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 51872 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 51856 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 51840 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 51824 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 51808 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 51792 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 51776 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 51760 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 51744 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 51728 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 51712 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 51696 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 51680 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 51664 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 51648 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 51632 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 51616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 51600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 51584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=1344931128
+mem_heap_B=21632
+mem_heap_extra_B=10816
+mem_stacks_B=0
+heap_tree=detailed
+n2: 21632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 21616 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 21616 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 21616 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 21600 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 21584 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 21568 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 21552 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 21536 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 21520 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 21504 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 21488 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 21472 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 21456 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 21440 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 21424 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 21408 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 21392 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 21376 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 21360 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 21344 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 21328 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 21312 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 21296 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 21280 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 21264 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 21248 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 21232 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 21216 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 21200 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 21184 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 in 1 place, below massif's threshold (1.00%)
+                             n0: 16 in 1 place, below massif's threshold (1.00%)
+                            n0: 16 in 1 place, below massif's threshold (1.00%)
+                           n0: 16 in 1 place, below massif's threshold (1.00%)
+                          n0: 16 in 1 place, below massif's threshold (1.00%)
+                         n0: 16 in 1 place, below massif's threshold (1.00%)
+                        n0: 16 in 1 place, below massif's threshold (1.00%)
+                       n0: 16 in 1 place, below massif's threshold (1.00%)
+                      n0: 16 in 1 place, below massif's threshold (1.00%)
+                     n0: 16 in 1 place, below massif's threshold (1.00%)
+                    n0: 16 in 1 place, below massif's threshold (1.00%)
+                   n0: 16 in 1 place, below massif's threshold (1.00%)
+                  n0: 16 in 1 place, below massif's threshold (1.00%)
+                 n0: 16 in 1 place, below massif's threshold (1.00%)
+                n0: 16 in 1 place, below massif's threshold (1.00%)
+               n0: 16 in 1 place, below massif's threshold (1.00%)
+              n0: 16 in 1 place, below massif's threshold (1.00%)
+             n0: 16 in 1 place, below massif's threshold (1.00%)
+            n0: 16 in 1 place, below massif's threshold (1.00%)
+           n0: 16 in 1 place, below massif's threshold (1.00%)
+          n0: 16 in 1 place, below massif's threshold (1.00%)
+         n0: 16 in 1 place, below massif's threshold (1.00%)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+       n0: 16 in 1 place, below massif's threshold (1.00%)
+      n0: 16 in 1 place, below massif's threshold (1.00%)
+     n0: 16 in 1 place, below massif's threshold (1.00%)
+    n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=1352432388
+mem_heap_B=640
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=detailed
+n3: 640 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 624 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 624 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 624 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 608 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 592 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 576 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 560 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 544 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 528 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 512 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 496 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 480 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 464 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 448 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 432 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 416 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 400 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 384 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 368 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 352 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 336 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n2: 320 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n2: 304 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n2: 288 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n2: 272 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n2: 256 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n2: 240 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n2: 224 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n2: 208 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 192 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                              n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                             n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                            n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                           n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                          n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                         n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                        n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16 0x109314: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 16 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=1352433361
+mem_heap_B=608
+mem_heap_extra_B=304
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1352434302
+mem_heap_B=576
+mem_heap_extra_B=288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1352435164
+mem_heap_B=544
+mem_heap_extra_B=272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1352435994
+mem_heap_B=512
+mem_heap_extra_B=256
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1352436745
+mem_heap_B=480
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1352437558
+mem_heap_B=448
+mem_heap_extra_B=224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1352438292
+mem_heap_B=416
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1352439041
+mem_heap_B=384
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1352439711
+mem_heap_B=352
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1352440396
+mem_heap_B=320
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n3: 320 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 304 0x1093A0: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 304 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n2: 304 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n2: 288 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n2: 272 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n2: 256 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n2: 240 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n2: 224 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n2: 208 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n2: 192 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n2: 176 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n2: 160 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n2: 144 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n2: 128 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n2: 112 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n2: 96 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n2: 80 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n2: 64 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n2: 48 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n2: 32 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n2: 16 0x10AA75: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                       n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                      n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                     n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                    n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                   n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                  n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                 n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+                n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+               n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+              n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+             n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+            n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+           n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+          n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+         n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+        n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+       n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+      n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+     n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16 0x109314: push_back (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+  n1: 16 0x10A96A: goByPath (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+   n1: 16 0x10AB90: findSolution (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+    n0: 16 0x10975E: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=1352441049
+mem_heap_B=288
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1352441895
+mem_heap_B=240
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1352442722
+mem_heap_B=192
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1352443424
+mem_heap_B=144
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1352444107
+mem_heap_B=96
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1352444792
+mem_heap_B=32
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1352445785
+mem_heap_B=4584
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1434518649
+mem_heap_B=488
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1434523134
+mem_heap_B=16
+mem_heap_extra_B=8
 mem_stacks_B=0
 heap_tree=empty
