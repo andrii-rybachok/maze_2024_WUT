@@ -20,3 +20,4 @@ void show(node *head);
 void push_back(node **head, int steps,int direction);
 void pop_back(node **head);
 int getListSteps(node *head);
+void printSolution(char* fileName, node *head);

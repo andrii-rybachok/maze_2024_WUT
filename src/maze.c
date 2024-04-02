@@ -388,11 +388,9 @@ int move(unsigned int maze[],mazeParams params,cords * moveCords,int * backDirec
         for (int i = 0; i < 4; i++)
         {
             if(i!=*backDirection && TestBit(&directions,i,0)){
-                // printf("i %d",i);
                 possibleDirections++;
             }
         }
-        // printf("x %d, y %d, d %d\n",moveCords->x,moveCords->y,possibleDirections);
         if(possibleDirections==1 ){
             if(direction==-1){
                 for (int i = 0; i < 4; i++)
@@ -429,132 +427,48 @@ int getBits(int * a ,int length){
     return count;
 }
 
-int goByPath(unsigned int maze[],mazeParams * params,node ** head,cords  currentCords,int backDirection,int isStart){
+void goByPath(unsigned int maze[],mazeParams * params,node ** head,cords  currentCords,int backDirection){
 
     cords tmp = currentCords;
     int direction = move(maze,*(params),&currentCords,&backDirection);
-    // printf("direction: %d backdirection %d \n",direction,backDirection);
+
     int steps= abs(tmp.x-currentCords.x)!=0?abs(tmp.x-currentCords.x):abs(tmp.y-currentCords.y);
 
     if(params->endCords.x==currentCords.x && currentCords.y==params->endCords.y){
-        
-        // printf("finish \n\n");
+
         push_back(head,steps+1,getAlternateDirection(backDirection));
-        // show(*head);
+
         int listSteps=getListSteps(*head);
         if(listSteps<params->minSteps || params->minSteps==0){
             params->minSteps=listSteps;
+            printSolution("dane/solution.txt",*head);
         }
         pop_back(head);
 
-        return 1;
+        return ;
     }
     if(direction==-1){
-        // printf("dead \n");
-        // pop_back(head);
 
-        return 0;
+        return ;
     }
-    // printf("xx %d, y %d \n",abs(tmp.x-moveCords->x),tmp.y);
 
     push_back(head,steps+1,direction);
   
     unsigned int directions=availableDirections( maze, *(params),currentCords);
-    if(isStart==0 && getBits(&directions,4)>2){
-        // printf("start, x %d, y %d \n",currentCords.x,currentCords.y);
-        isStart=1;
-    }
-    else if ( isStart==1 && getBits(&directions,4)>2){
-        // printf("!start, x %d, y %d \n",currentCords.x,currentCords.y);
 
-        isStart=0;
-    }
     int isWining=0;
     for (int i = 3; i >= 0; i--)
     {
         if(i!=backDirection && TestBit(&directions,i,0)){
-        // printf("iii %d \n",i);
-            // printf("i %d\n",i);
             tmp = currentCords;
             ClearBit(maze,currentCords.x,currentCords.y);
-                    // printf("current cords x : %d, y: %d iii %d backDirection %d\n",currentCords.x,currentCords.y,i,backDirection);
-
-            // makeStep(&tmp,backDirection);
-
-            // if(tmp.x!=params.endCords.x || tmp.y!=params.endCords.y){
-            //     ClearBit(maze,tmp.x,tmp.y);
-            // }
-
-            // tmp = currentCords;
             makeStep(&tmp,i);
-            // if(tmp.x!=params.endCords.x || tmp.y!=params.endCords.y){
-            //     ClearBit(maze,tmp.x,tmp.y);
-            // }
-            //         printMaze(maze,params);
+            goByPath(maze,params,head,tmp,getAlternateDirection(i));
+            SetBit(maze,currentCords.x,currentCords.y);
 
-            // tmp = currentCords;
-            // makeStep(&tmp,getAlternateDirection(i));
-            // if(tmp.x!=params.endCords.x && tmp.y!=params.endCords.y){
-            //     ClearBit(maze,tmp.x,tmp.y);
-            // }
-            // printMaze(maze,params);
-            goByPath(maze,params,head,tmp,getAlternateDirection(i),isStart);
-            // if(){
-            //     unsigned int localDirs = availableDirections(maze,params,currentCords);              
-            //     if(getBits(&localDirs,4)>1){
-            //         SetBit(maze,currentCords.x,currentCords.y);
-            //         tmp = currentCords;
-            //         if(isStart){
-            //             printf("!start, x %d, y %d \n",currentCords.x,currentCords.y);
-            //             makeStep(&tmp,i);
-            //             // isStart=0;
-            //         }
-            //         else{
-            //              printf("start, x %d, y %d \n",currentCords.x,currentCords.y);
-            //             // isStart=1;
-            //             makeStep(&tmp,backDirection);
-            //         }
-            //         ClearBit(maze,tmp.x,tmp.y);
-            //         // return 1;
-            //     }
-            //     else{
-            //         SetBit(maze,currentCords.x,currentCords.y);
-
-            //     }
-            //     isWining=1;
-            //     // printf("backdirection %d, cur x %d, y %d, start %d \n",backDirection,currentCords.x,currentCords.y,isStart);
-
-            //     // else{
-            //     //     SetBit(maze,currentCords.x,currentCords.y);
-
-            //     // }
-                
-            // }
-                SetBit(maze,currentCords.x,currentCords.y);
-            // else{
-            //     // isWining=0;
-            //         // printMaze(maze,params);
-
-            //     // tmp = currentCords;
-            //     // makeStep(&tmp,backDirection);
-            //     // SetBit(maze,tmp.x,tmp.y);
-            //     // tmp = currentCords;
-            //     // makeStep(&tmp,i);
-            //     // SetBit(maze,tmp.x,tmp.y);
-
-            //     // printf("bef x : %d, y: %d \n",tmp.x,tmp.y);
-            //     // printf("x : %d, y: %d \n",tmp.x,tmp.y);
-            //     // // printMaze(maze,params);
-            // }
-                //     printMaze(maze,params);
-                // printf("\n");
-            
         }
     }
     pop_back(head);
-    // printf("lol  x : %d, y: %d backDirection %d\n",currentCords.x,currentCords.y,backDirection);
-    // printf("lol\n");
-    return isWining;
 }   
 void printMaze(unsigned int maze[],mazeParams params){
     for (int i = 0; i < params.rows; i++) {                 
@@ -574,27 +488,10 @@ void findSolution(unsigned int maze[],mazeParams * params){
     params->minSteps=0;
  
     node* head = NULL;
-    // head->vertexNumber=currVertexNumber;
-    // for (int i = 0; i < 3; i++)
-    // {
-    //     head->nodes[i]=NULL;
-    // }
-    goByPath(maze,params,&head,params->startCords,-1,0);
-        // show(head);
-
+    goByPath(maze,params,&head,params->startCords,-1);
     writeMazeToFile(maze,*(params));
     printf("min steps %d",params->minSteps);
-    //  moveCords.x=3;
-    // moveCords.y=1;
-    // unsigned int localDirs = availableDirections(maze,params,moveCords);
-    // for (int i = 3; i >= 0; i--)
-    // {
-        
-    //     if(TestBit(&localDirs,i,0)){
-    //         printf("%d,",i);
-    //     }
-    // }
-    // printf("\n");
+
     
 }
 

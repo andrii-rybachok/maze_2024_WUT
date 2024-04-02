@@ -95,3 +95,41 @@ int getListSteps(node *head)
     }
     return stepsInList;
 }
+void printSolution(char* fileName, node *head){
+    FILE * fp= fopen(fileName,"w");
+    if (fp == NULL) {
+        printf("Error opening file.\n");
+        return;
+    }
+    if(head!=NULL)
+    {
+        node *current=head;
+            do {
+                char str[20];
+                switch (current->direction)
+                {
+                case 0:
+                    sprintf(str,"GO LEFT %d \n",current->countOfSteps);
+                    break;
+                case 1:
+                    sprintf(str,"GO RIGHT %d \n",current->countOfSteps);
+                    break;
+                case 2:
+                    sprintf(str,"GO BOT %d \n",current->countOfSteps);
+
+                    break;
+                case 3:
+                    sprintf(str,"GO TOP %d \n",current->countOfSteps);
+
+                    break;
+                default:
+                    break;
+                }
+                fputs(str,fp);
+            current = current->next;
+            }while (current != NULL);
+ 
+    }
+  
+    fclose(fp);
+}

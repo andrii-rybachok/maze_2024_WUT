@@ -29,19 +29,5 @@ int main()
     removeDeadEnds(maze,params);
     writeMazeToFile(maze,params);
     findSolution(maze,&params);
-
-    //  for (int i = 0; i < 1; i++)
-    //  {
-    //     push_back(&head,10,1);
-    //  }
-     
-    // int numberOfVertices, numberOfEdges, i;
-    // int source, destination;
-    // int startingVertex;
-
-  
-    // SetBit( visitedNodes, 0);
-    // printf("is true %d", TestBit(visitedNodes,0));
-
     return 0;
 }
