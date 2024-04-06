@@ -1,4 +1,4 @@
-#include "graph.h"
+#include "list.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,20 +9,34 @@
 #define MAZE_WALL 'X'
 #define MAZE_PATH ' '
 
-#define MAZE_SIZE_X 1030
-#define MAZE_SIZE_Y 1030
+
+#define MAZE_SIZE_X 2049
+#define MAZE_SIZE_Y 2049
+
+
+
+
+typedef struct mazeParams
+{
+    int cols;
+    int rows;
+    char* originFileName;
+    char* ourFileName;
+    cords endCords;
+    cords startCords;
+    int minSteps;
+} mazeParams;
 
 
 int getCountOfVertices(char * fileName);
 
-void printSolve(Graph filledGraph,char* destFileName);
 
-void fillGraph(Graph graph, char* filename);
+void findSolution(unsigned int maze[],mazeParams* params);
 
-int isDeadEnd(char maze[][MAZE_SIZE_Y], int x, int y);
+mazeParams initializeParams(char* originFileName,char* ourFileName);
 
-void writeMazeToFile(char maze[][MAZE_SIZE_Y], char *filename, int rows);
+void writeMazeToFile(unsigned int maze[],mazeParams params);
 
-void readMazeFromFile(char maze[][MAZE_SIZE_Y], char *filename);
+int readMazeFromFile(unsigned int maze[], mazeParams params);
 
-void removeDeadEnds(char maze[][MAZE_SIZE_Y], int rows, int cols);
+void removeDeadEnds(unsigned int maze[],mazeParams params);
