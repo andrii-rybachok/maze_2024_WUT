@@ -1,57 +1,62 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
 #include "maze.h"
+#include "help.h"
+#include "operacja.h"
 
+int main(int argc, char** argv) {
+    if (argc == 2 && (strcmp(argv[1], "-h") == 0)) {
+        displayHelp();
+        return 0; 
+    }
 
+    char *inputFileName = argv[2];
+    char outputFileName[strlen(inputFileName) + strlen("_updated.txt") + 1];
+    strcpy(outputFileName, inputFileName);
+    strcat(outputFileName, "_updated.txt");
 
-int main()
-{
-    int n=getCountOfVertices("dane/maze.txt");
-    
-//     int numberOfVertices, numberOfEdges, i;
-//     int source, destination;
-//     int startingVertex;
+    char solutionFileName[strlen(inputFileName) + strlen("_solution.txt") + 1];
+    strcpy(solutionFileName, inputFileName);
+    strcat(solutionFileName, "_solution.txt");
 
-//     printf("Enter Number of Vertices and Edges in the Graph: ");
+    char binaryFileName[strlen(inputFileName) + strlen(".bit") + 1];
+    strcpy(binaryFileName, inputFileName);
+    strcat(binaryFileName, ".bit");
 
-    //  Graph *graph = initializeGraph(n);
-    // printf("size %d",sizeof(node));
-    char maze[MAZE_SIZE_Y][MAZE_SIZE_X];
-    int rows = 0;
-    readMazeFromFile(maze, "dane/maze.txt");
+    unsigned int maze[(MAZE_SIZE_X) * (MAZE_SIZE_Y) / 32 + 1];
+    for (int i = 0; i < (MAZE_SIZE_X) * (MAZE_SIZE_Y) / 32 + 1; i++) {
+        maze[i] = 0;   
+    }
 
-    while (maze[rows][0] != '\0')
-        rows++;
+    mazeParams params = initializeParams(inputFileName, outputFileName);
 
-    removeDeadEnds(maze, rows, MAZE_SIZE_Y);
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "-r") == 0) {
+            if (readMazeFromFile(maze, params) == -1) {
+                printf("Error: unable to open, use -h %s.\n", inputFileName);
+                return -1;
+            }
+            readMazeFromFile(maze, params);
+        } else if (strcmp(argv[i], "-w") == 0) {
+            removeDeadEnds(maze, params);
+            writeMazeToFile(maze, params);
+        } else if (strcmp(argv[i], "-s") == 0) {
+            removeDeadEnds(maze, params);
+            writeMazeToFile(maze, params);
+            findSolution(maze, &params);
+        } 
+        else if (strcmp(argv[i], "-rb") == 0) {
+            readMazeFromBinary(binaryFileName, maze, &params);
+        } else if (strcmp(argv[i], "-wb") == 0) {
+            removeDeadEnds(maze, params);
+           writeMazeToBinary(binaryFileName, maze, params);
+        } else if (strcmp(argv[i], "-sb") == 0) {
+            removeDeadEnds(maze, params);
+            writeMazeToBinary(binaryFileName, maze, params);
+            findSolution(maze, &params);
+        }
+    }
 
-    writeMazeToFile(maze, "dane/maze_updated.txt", rows);
-    // addEdgeToGraph(graph, 0, 1,1,1);
-    // addEdgeToGraph(graph, 0, 2,1,1);
-
-    // addEdgeToGraph(graph, 0, 3,1,1);
-
-//     printf("Add %d Edges of the Graph(Vertex numbering should be from 0 to %d)\n", numberOfEdges, numberOfVertices - 1);
-//    //  for (i = 0; i < numberOfEdges; i++)
-//    //  {
-//    //      scanf("%d%d", &source, &destination);
-//    //      addEdgeToGraph(graph, source, destination);
-//    //  }
-// addEdgeToGraph(graph, 0, 1);
-// addEdgeToGraph(graph, 1, 2);
-// addEdgeToGraph(graph, 0, 2);
-// addEdgeToGraph(graph, 2, 3);
-// addEdgeToGraph(graph, 4, 3);
-// addEdgeToGraph(graph, 5, 3);
-// addEdgeToGraph(graph, 5, 4);
-
-//     printf("Enter Starting Vertex for DFS Traversal: ");
-
-
-//     if (2 < 6)
-//     {
-//         printf("DFS Traversal: ");
-//         depthFirstSearch(graph, 2);
-//     }
-     return 0;
+    return 0;
 }
