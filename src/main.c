@@ -3,7 +3,6 @@
 #include <string.h>
 #include "maze.h"
 #include "help.h"
-#include "operacja.h"
 
 int main(int argc, char** argv) {
     if (argc == 2 && (strcmp(argv[1], "-h") == 0)) {
@@ -20,9 +19,12 @@ int main(int argc, char** argv) {
     strcpy(solutionFileName, inputFileName);
     strcat(solutionFileName, "_solution.txt");
 
-    char binaryFileName[strlen(inputFileName) + strlen(".bit") + 1];
-    strcpy(binaryFileName, inputFileName);
-    strcat(binaryFileName, ".bit");
+    char *binarnyInputFile = argv[2];
+    char binaryOutputFile[strlen(binarnyInputFile) + strlen("_updated.bin") + 1];
+    strcpy(binaryOutputFile, binarnyInputFile);
+    strcat(binaryOutputFile, "_updated.bin");
+
+
 
     unsigned int maze[(MAZE_SIZE_X) * (MAZE_SIZE_Y) / 32 + 1];
     for (int i = 0; i < (MAZE_SIZE_X) * (MAZE_SIZE_Y) / 32 + 1; i++) {
@@ -30,6 +32,7 @@ int main(int argc, char** argv) {
     }
 
     mazeParams params = initializeParams(inputFileName, outputFileName);
+    mazeParams paramsb = initializeParams(binarnyInputFile, binaryOutputFile);
 
     for (int i = 1; i < argc; i++) {
         if (strcmp(argv[i], "-r") == 0) {
@@ -46,16 +49,22 @@ int main(int argc, char** argv) {
             writeMazeToFile(maze, params);
             findSolution(maze, &params);
         } 
-        else if (strcmp(argv[i], "-rb") == 0) {
-            readMazeFromBinary(binaryFileName, maze, &params);
+    }
+
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "-rb") == 0) {
+            if (readMazeFromFileBinarny(maze, paramsb) == -1) {
+                printf("Error: unable to open, use -h %s.\n", binarnyInputFile);
+                return -1;
+            }
         } else if (strcmp(argv[i], "-wb") == 0) {
             removeDeadEnds(maze, params);
-           writeMazeToBinary(binaryFileName, maze, params);
+            writeMazeToFileBinarny(maze, paramsb);
         } else if (strcmp(argv[i], "-sb") == 0) {
             removeDeadEnds(maze, params);
-            writeMazeToBinary(binaryFileName, maze, params);
-            findSolution(maze, &params);
-        }
+            writeMazeToFileBinarny(maze, paramsb);
+            findSolutionBinarny(solutionFileName, maze, &params);
+        } 
     }
 
     return 0;
