@@ -1,7 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "maze.h"
+#include <string.h>
+
+
+#define FILE_ID 0x52524243
+#define ESCAPE_CHAR 0x1B
 
 typedef struct {
     uint32_t fileId;
@@ -12,30 +17,20 @@ typedef struct {
     uint16_t entryY;
     uint16_t exitX;
     uint16_t exitY;
-    uint64_t reserved;
+    uint32_t reserved;
     uint32_t counter;
     uint32_t solutionOffset;
     uint8_t separator;
     uint8_t wall;
     uint8_t path;
-} FileHeader;
-
-typedef struct {
-    uint8_t separator;
-    uint8_t value;
-    uint8_t count;
-} CodeWord;
+} BinaryMazeHeader;
 
 typedef struct {
     uint32_t direction;
     uint8_t steps;
-} SolutionHeader;
+} BinarySolutionHeader;
 
 typedef struct {
     uint8_t direction;
     uint8_t counter;
-} SolutionStep;
-
-// Function prototypes
-void readMazeFromBinary(const char* filename, unsigned int maze[], mazeParams* params);
-void writeMazeToBinary(const char* filename, unsigned int maze[], mazeParams params);
+} BinarySolutionStep;
