@@ -494,3 +494,86 @@ void findSolution(unsigned int maze[],mazeParams * params){
 
     
 }
+
+int readMazeFromFileBinarny(unsigned int maze[], mazeParams params) {
+    FILE *in = fopen(params.originFileName, "rb");
+    if (in == NULL) {
+        printf("Error opening file.\n");
+        return -1;
+    }
+    
+    BinaryMazeHeader header;
+    fread(&header, sizeof(BinaryMazeHeader), 1, in);
+
+    fclose(in);
+    return 0;
+}
+
+
+void writeMazeToFileBinarny(unsigned int maze[], mazeParams params) {
+    FILE *out = fopen(params.ourFileName, "wb");
+    if (out == NULL) {
+        printf("Error opening file for writing.\n");
+        return;
+    }
+
+    BinaryMazeHeader header;
+    header.fileId = FILE_ID;
+    header.escape = ESCAPE_CHAR;
+    header.columns = params.cols;
+    header.lines = params.rows;
+    header.entryX = params.startCords.x;
+    header.entryY = params.startCords.y;
+    header.exitX = params.endCords.x;
+    header.exitY = params.endCords.y;
+    header.reserved = 0;
+
+    fwrite(&header, sizeof(BinaryMazeHeader), 1, out);
+
+    fclose(out);
+}
+
+void findSolutionBinarny(FILE *out, unsigned int maze[], mazeParams *params) {
+    params->minSteps = 0;
+ 
+    node* head = NULL;
+    goByPath(maze, params, &head, params->startCords, -1);
+
+    if (out != NULL) {
+
+        fwrite(&(params->minSteps), sizeof(int), 1, out);
+
+
+        node *current = head;
+        while (current != NULL) {
+
+            unsigned char buffer[2];
+
+            buffer[0] = current->direction;
+            buffer[1] = current->countOfSteps;
+
+            fwrite(buffer, sizeof(buffer), 1, out);
+
+            current = current->next;
+        }
+    } else {
+        printf("Error: Could not open file for writing.\n");
+    }
+
+    freeList(&head);
+
+    printf("min steps %d\n", params->minSteps);
+}
+
+void freeList(node **head) {
+    node *current = *head;
+    node *next;
+
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+
+    *head = NULL;
+}
