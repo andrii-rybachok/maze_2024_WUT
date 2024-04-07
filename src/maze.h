@@ -1,4 +1,5 @@
 #include "list.h"
+#include "operacja.h" 
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,3 +41,10 @@ void writeMazeToFile(unsigned int maze[],mazeParams params);
 int readMazeFromFile(unsigned int maze[], mazeParams params);
 
 void removeDeadEnds(unsigned int maze[],mazeParams params);
+
+
+int readMazeFromFileBinarny(unsigned int maze[], mazeParams params);
+
+void writeMazeToFileBinarny(unsigned int maze[], mazeParams params);
+
+void findSolutionBinarny(FILE *out, unsigned int maze[], mazeParams *params);
