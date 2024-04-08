@@ -26,6 +26,12 @@ typedef struct {
 } BinaryMazeHeader;
 
 typedef struct {
+    uint8_t separator;
+    uint8_t value;
+    uint8_t count;
+} BinaryWordHeader;
+
+typedef struct {
     uint32_t direction;
     uint8_t steps;
 } BinarySolutionHeader;
@@ -34,3 +40,4 @@ typedef struct {
     uint8_t direction;
     uint8_t counter;
 } BinarySolutionStep;
+
