@@ -19,7 +19,6 @@ int main()
    
     char ourFile[]="dane/maze_updated.txt";
     char mainFile[]="dane/maze.txt";
-
    
 
     mazeParams params=initializeParams(mainFile,ourFile);

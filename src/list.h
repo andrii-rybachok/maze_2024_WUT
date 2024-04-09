@@ -1,20 +1,16 @@
-
+#pragma pack(push, 1)
 typedef struct  node{
     unsigned short countOfSteps: 14;
     unsigned short direction : 2;
     struct node* next;
 } node;
+#pragma pack(pop)
 typedef struct cords
 {
     int x;
     int y;
 } cords;
-typedef struct listParams
-{
-    int* visitedVertices;
-    cords * currentCords;
-    int lastVerticeNumber;
-} listParams;
+
 
 void show(node *head);
 void push_back(node **head, int steps,int direction);
