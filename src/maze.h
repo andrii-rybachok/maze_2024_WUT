@@ -43,8 +43,4 @@ int readMazeFromFile(unsigned int maze[], mazeParams params);
 void removeDeadEnds(unsigned int maze[],mazeParams params);
 
 
-int readMazeFromFileBinarny(unsigned int maze[], mazeParams params);
-
-void writeMazeToFileBinarny(unsigned int maze[], mazeParams params);
-
-void findSolutionBinarny(FILE *out, unsigned int maze[], mazeParams *params);
+void convertBinaryToText(const char *binaryFilename, const char *textFilename);
