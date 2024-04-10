@@ -1,0 +1,78 @@
+desc: --massif-out-file=massif.out
+cmd: ./bin/maze
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=146845
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=147783
+mem_heap_B=1034
+mem_heap_extra_B=22
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=147820
+mem_heap_B=1044
+mem_heap_extra_B=36
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=147857
+mem_heap_B=1054
+mem_heap_extra_B=50
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=147894
+mem_heap_B=1064
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=150758
+mem_heap_B=1064
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=peak
+n2: 1064 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x48D7BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x48E6CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48E5F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x48E46D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x48E46D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x48CE14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48CE14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x48B979E: printf (printf.c:33)
+         n0: 1024 0x109859: main (in /mnt/d/wut/jimp/labirynt/code/bin/maze)
+ n0: 40 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=150758
+mem_heap_B=40
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
