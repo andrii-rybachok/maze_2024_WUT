@@ -47,41 +47,6 @@ void pop_back(node **head)
 }
 
 
-void show(node *head)
-{
-    printf("\n");
-    if(head==NULL) printf("List is empty");
-    else
-    {
-        node *current=head;
-            do {
-            switch (current->direction)
-            {
-            case 0:
-                printf("GO LEFT");
-                break;
-            case 1:
-                printf("GO RIGHT");
-                break;
-            case 2:
-                printf("GO BOT");
-                break;
-            case 3:
-                printf("GO TOP");
-                break;
-            default:
-                break;
-            }
-            printf(", steps %d",current->countOfSteps);
-            printf("\n");
-            current = current->next;
-            }while (current != NULL);
- 
-    }
-    printf("\n");
-
-}
-
 int getListSteps(node *head)
 {
     int stepsInList=0;
@@ -95,41 +60,98 @@ int getListSteps(node *head)
     }
     return stepsInList;
 }
-void printSolution(char* fileName, node *head){
-    FILE * fp= fopen(fileName,"w");
-    if (fp == NULL) {
-        printf("Error opening file.\n");
-        return;
-    }
-    if(head!=NULL)
+
+
+void saveSolution(node *head,mazeParams params){
+    FILE * fp;
+    // robimy switch po typu rozwiązania
+    switch (params.solutionType)
     {
-        node *current=head;
-            do {
-                char str[20];
-                switch (current->direction)
-                {
-                case 0:
-                    sprintf(str,"GO LEFT %d \n",current->countOfSteps);
-                    break;
-                case 1:
-                    sprintf(str,"GO RIGHT %d \n",current->countOfSteps);
-                    break;
-                case 2:
-                    sprintf(str,"GO BOT %d \n",current->countOfSteps);
+    // w przypadku t , zapisujemy rozwiązanie jako plik tekstowy
+    case 't': ;
+        fp = fopen(params.solutionFileName,"w");
+        if (fp == NULL) {
+            printf("Error 1opening file.\n");
+            return;
+        }
+        if(head!=NULL)
+        {
+            node *current=head;
+                do {
+                    char str[20];
+                    // tworzenie stringu dla zapisania kroku
+                    switch (current->direction)
+                    {
+                    case 0:
+                        sprintf(str,"GO LEFT %d \n",current->countOfSteps);
+                        break;
+                    case 1:
+                        sprintf(str,"GO RIGHT %d \n",current->countOfSteps);
+                        break;
+                    case 2:
+                        sprintf(str,"GO BOT %d \n",current->countOfSteps);
 
-                    break;
-                case 3:
-                    sprintf(str,"GO TOP %d \n",current->countOfSteps);
+                        break;
+                    case 3:
+                        sprintf(str,"GO TOP %d \n",current->countOfSteps);
 
-                    break;
-                default:
-                    break;
-                }
-                fputs(str,fp);
-            current = current->next;
-            }while (current != NULL);
- 
+                        break;
+                    default:
+                        break;
+                    }
+                    fputs(str,fp);
+                current = current->next;
+                }while (current != NULL);
+    
+        } 
+        fclose(fp);
+        break;
+    // w przypadku t , zapisujemy rozwiązanie jako plik binarny
+    case 'b': ;
+        fp = fopen(params.solutionFileName,"wb");
+        if (fp == NULL) {
+            printf("Error opening binary final file.\n");
+            return;
+        }
+        binHeader header = getFileHeader(params.originFileName); // pobieramy z pomocą zewnętrznej funkcji nagłówek pliku binarnego
+        int countOfSteps = params.minSteps; // bierzemy iłość kroków   
+        //zapisywanie nagłówku
+        fwrite(&(header.file_id),sizeof(header.file_id),1,fp); // przypisujemy znaczenie id z nagłówku 
+        fwrite(&(countOfSteps),sizeof(countOfSteps),1,fp); 
+        // tworzenie charu na podstawie current direction
+        if(head!=NULL)
+        {
+            node *current=head;
+                do {
+                    char direction;
+                    switch (current->direction)
+                    {
+                    case 0:
+                        direction = 'W';
+                        break;
+                    case 1:
+                        direction = 'E';
+                        break;
+                    case 2:
+                        direction = 'S';
+                        break;
+                    case 3:
+                        direction = 'N';
+                        break;
+                    default:
+                        break;
+                    }
+                // zapisywanie kroku
+                fwrite(&(direction),sizeof(direction),1,fp); 
+                char currentSteps= current->countOfSteps;
+                fwrite(&currentSteps,sizeof(currentSteps),1,fp);          
+                current = current->next;
+                }while (current != NULL);   
+        } 
+        fclose(fp);
+        break;
+    default:
+        break;
     }
-  
-    fclose(fp);
+   
 }
