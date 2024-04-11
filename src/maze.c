@@ -1,108 +1,9 @@
 #include "maze.h"
-// 0 - wall, 1 - path
-
-// 0 - znak nad, 1 - znak z prawa , 2- znak pod, 3 - znak z lewa 
-// sprawdzamy czy punkt jest węzłem
-bool isVertice(char* points){
-    for (int i = 0; points[i]!= '\0'; i++)
-    {
-       if (points[i]==MAZE_END || points[i]==MAZE_START)
-       {
-            points[i]=' ';
-       }
-    }
-        
-    return (points[1]!=points[3] || points[0]!=points[2]);
-    
-}
-
-int getCountOfVertices(char * fileName){
-    FILE *fp = fopen(fileName, "r");
-    char top[2050], middle[2050], bottom[2050];
-    int countOfVertices=0;
-    int linesCount=0;
-
-    //czytamy pierwsze 3 linii
-    fscanf(fp, "%2050[^\n]%*c%2050[^\n]%*c%2050[^\n]%*c", top, middle, bottom);
-    countOfVertices += getVerticesFromLines(top,middle,bottom);
-    if (strchr(top,MAZE_START) || strchr(top,MAZE_END))
-    {
-        countOfVertices++;
-    }
-    // tu zapisujemy średnią i niżną linię , które przeczytaliśmy z pliku
-    char  beforeMiddle[2050];
-    char  beforeBottom[2050];
-
-    strcpy(beforeMiddle, middle);
-    strcpy(beforeBottom,bottom);
 
 
-    while((linesCount= fscanf(fp, "%2050[^\n]%*c%2050[^\n]%*c%2050[^\n]%*c", top, middle, bottom))!=EOF){
-
-        switch (linesCount)
-        {
-            case 2:
-                countOfVertices += getVerticesFromLines(beforeMiddle,beforeBottom,top);
-                countOfVertices += getVerticesFromLines(beforeMiddle, top,middle);
-
-                if (strstr(middle,"K") || strstr(middle,"P"))
-                {
-                    countOfVertices++;
-                }
-                break;
-            case 3:
-                // wykorzystujemy zeszłe linie żeby przeczytać przeszły dół
-                countOfVertices += getVerticesFromLines(beforeMiddle,beforeBottom,top);
-                // wykorzystujemy zeszłe linie żeby przeczytać terażniejszy top
-                countOfVertices += getVerticesFromLines(beforeBottom,top,middle);
-
-                countOfVertices += getVerticesFromLines(top,middle,bottom);
-                strcpy(beforeMiddle, middle);
-                strcpy(beforeBottom,bottom);
-                break;
-            case 1:
-                countOfVertices += getVerticesFromLines(beforeMiddle,beforeBottom,top);
-                if (strchr(top,MAZE_START) || strchr(top,MAZE_END))
-                {
-
-                    countOfVertices++;
-                }
-                break;
-        default:
-            break;
-        }
-    }
-
-    fclose(fp);
-    return countOfVertices;
-}
-
-
-// w tej funkcji czytamy jednocześńie jakby 3 linie na raz i podajemy to sprawdzenia otoczenie przeczytanego jednego chara ( czyli char można wyobrazić jak osobę a otoczenie to wierzch,dół lewo i prawo w 2d)
-int getVerticesFromLines(char* top, char* middle, char* bot){
-    int vertices=0;
-
-       
-    for (int i = 0; middle[i]!= '\0'; i++)
-    {
-        // tu podajemy otoczenie chara
-        char surronding[5] = {top[i],middle[i+1],bot[i],middle[i-1],'\0'};
-
-        if((middle[i]==MAZE_END || middle[i]==MAZE_START) || (middle[i] == MAZE_PATH &&  isVertice(surronding)))
-        {
-            vertices++;
-        }
-
-    }
-
-
-    return vertices;
-    
-}
-
-
-
-void  SetBit(unsigned int A[],  int x ,int y )
+// Funkcje dla działania na tablice bitowej dwuwymiarowej. Tablica jest maksymalnego rozmiaru, dlatego jeden wiersz to 2049 znaków
+// 1 - ścieżka , 0 - ściana
+void  SetBit(unsigned int A[],  int x ,int y ) 
 {
 
     x+=MAZE_SIZE_X*y;
@@ -123,8 +24,7 @@ int count_lines(char* fileName)
 {
      FILE *file = fopen(fileName, "r");
     if (file == NULL) {
-        printf("Error opening file.\n");
-        return -1; // Return -1 to indicate error
+        return -1; 
     }
 
     int count = 1;
@@ -139,19 +39,19 @@ int count_lines(char* fileName)
     return count;
 }
 int countCharsInFirstLine(const char *filename) {
-    FILE *file = fopen(filename, "r"); // Open file in read mode
+    FILE *file = fopen(filename, "r");
     if (file == NULL) {
-        printf("Unable to open file %s\n", filename);
-        return -1; // Error opening file
+        return -1;
     }
-
+    char buff[MAZE_SIZE_X];
+    fgets(buff, MAZE_SIZE_X, file);
     int count = 0;
-    int ch;
-    while ((ch = fgetc(file)) != EOF && ch != '\n') {
-        count++; // Increment count for each character until newline or EOF
+    for (int i = 0; buff[i]==MAZE_WALL || buff[i]==MAZE_START || buff[i]==MAZE_END; i++)
+    {
+        count=i+1;   
     }
-
-    fclose(file); // Close the file
+    
+    fclose(file);
     return count;
 }
 cords getElemCords(char target,char* fileName ){
@@ -166,9 +66,8 @@ cords getElemCords(char target,char* fileName ){
             return elCords;
         }
         if (ch == '\n') {
-            // Move to the next line
             elCords.y++;
-            elCords.x=0; // Reset column count
+            elCords.x=0; 
         } else {
             elCords.x++;
         }
@@ -179,34 +78,93 @@ cords getElemCords(char target,char* fileName ){
     return elCords;
 }
 
+void checkMazeParams(mazeParams params){
+    if(params.endCords.x==-1 || params.endCords.y==-1 || params.startCords.x==-1 || params.startCords.y==-1){
+        handleError(3);
+    }
+}
 
-mazeParams initializeParams(char* originFileName,char* ourFileName){
+
+mazeParams initializeParams(char* originFileName){
 
     mazeParams params;
-    params.cols=count_lines(originFileName);
-    params.rows=countCharsInFirstLine(originFileName);
+    params.cols=countCharsInFirstLine(originFileName); // obliczenie liczby kolumn poprzez wewnętrzną funkcję 
+    if(params.cols==-1){
+        handleError(2);
+    }
+    params.rows=count_lines(originFileName); // obliczenie liczby wierzy poprzez wewnętrzną funkcję 
     params.originFileName=originFileName;
-    params.ourFileName=ourFileName;
-    params.endCords = getElemCords(MAZE_END,originFileName);
-    params.startCords = getElemCords(MAZE_START,originFileName);
+    params.endCords = getElemCords(MAZE_END,originFileName); // wyszukiwanie i zapisywanie położeń końca i początka
+    params.startCords = getElemCords(MAZE_START,originFileName); 
+    checkMazeParams(params);
+    return params;
+}
+
+mazeParams initializeParamsBin(char* originFileName){
+
+    mazeParams params;
+    binHeader header= getFileHeader(originFileName); // pobierania z modułu binaryAdapter file headera
+    params.cols=header.columns; // adaptacja informacji z headera
+    params.rows=header.lines;
+    params.originFileName=originFileName;  
+    params.endCords.x=header.exit_x-1;
+    params.endCords.y=header.exit_y-1;
+    params.startCords.x=header.entry_x-1;
+    params.startCords.y=header.entry_y-1;
+
+    checkMazeParams(params);
 
     return params;
 }
 
+void readMazeFromBinFile(unsigned int maze[],mazeParams params){
+    FILE *file = fopen(params.originFileName, "rb");
+    if (file == NULL) {
+        handleError(2);
+        return;
+    }
+    binHeader header;
+    fread(&header, sizeof(binHeader), 1, file); // wyczytujemy header
+    mazeKeys key;
+    int readedLines=0; // inaczej y
 
+    while (readedLines!=header.lines-1)
+    {
+        int readColumns=0; // przeczytane kolumny
+        int x=0;
+        while (readColumns!=header.columns ) // czytamy wiersz i sprawdzamy ile już przeczytaliśmy w tym wierszu
+        {
+           
+            fread(&key,sizeof(mazeKeys), 1, file); // czytamy jeden kłucz
+            int size=key.count+1; // dodajemy jedynkę , bo tu liczymy od jednego. Robimy nową zmienę , ponieważ maksymalnie możemy na raz przeczytać 256 znaków, a char mieści tylko 255
+            for (int i = 0; i < size; i++)
+            {
+                if(header.path==key.value){
+                    SetBit(maze,x,readedLines); // zapisujemy przeczytane do pliku
+                }
+                x++;
+            }
+            readColumns+=size; // odświeżamy liczbę przeczytanych kolumn
 
-// Funkcja odczytująca labirynt z pliku do tablicy dwuwymiarowej
+        }
+        readedLines++; // odświeżamy igrek
+        
+    }
+    fclose(file);
+}
+
+// Funkcja odczytująca labirynt z pliku do tablicy dwuwymiarowej bitowej
 int readMazeFromFile(unsigned int maze[], mazeParams params) {
     FILE *in = fopen(params.originFileName, "r");
     if (in == NULL) {
-        printf("Error opening file.\n");
+        handleError(2);
         return;
     }
     
     int currRow = 0;
 
     char buff[MAZE_SIZE_X+2];
-
+    // przeczytujemy plik po jednej linijce i zapisujemy do tablicy
     while (fgets(buff, MAZE_SIZE_X+2, in)) {
       
         for (int i = 0; buff[i]!='\0'; i++)
@@ -218,52 +176,25 @@ int readMazeFromFile(unsigned int maze[], mazeParams params) {
         }     
         currRow++;
     }
-   
+
     fclose(in);
 
 }
 
-// Funkcja zapisu zaktualizowanej tablicy do pliku
-void writeMazeToFile(unsigned int maze[],mazeParams params) {
-    FILE * fp;
-    fp = fopen(params.ourFileName, "w");
-   
 
-    if (fp == NULL) {
-        printf("Error opening file.\n");
-        return;
-    }
-    for (int i = 0; i < params.rows ; i++) {
-        
-        for (int j = 0; j < params.cols; j++)
-        {
-            if(i==params.startCords.y&&j==params.startCords.x){
-                fputc(MAZE_START,fp);
-            }
-            else if(i==params.endCords.y&&j==params.endCords.x){
-                fputc(MAZE_END,fp);
-            }
-            else if(TestBit(maze,j,i)){
-                fputc(MAZE_PATH, fp);
-            }
-            else{
-                fputc(MAZE_WALL,fp);
-            }
-        }
-        fputc('\n',fp);
-    }
-    fclose(fp);
-}
 
-// Funkcja sprawdzająca, czy punkt jest ślepym zaułkiem
+// Funkcja sprawdzająca, i usuwająca ślepy zaułek
 void isDeadEnd(unsigned int maze[], int x, int y) {
     int walls = 0;
-    if (!TestBit(maze,x,y))
+    if (!TestBit(maze,x,y)) // jeżeli jest ścianą , przerwij
     {
         return;
     }
     int currX=0;
     int currY=0;    
+    // Funckja jest napisana trochę topornie prze if else, ponieważ jest rekurencyjna i zżera dużo staku. 
+    // Zasada jest prosta, dla każdego kierunku punktu sprawdzamy czy ma on tam ścieżke, jeżeli tak to zapisujemy ten punkt dla przyszłej rekurencji
+    // jeżeli nie to dodajemy +1 to liczby ścian 
     if (TestBit(maze,x-1,y)){
         
         currX=x-1;
@@ -294,13 +225,12 @@ void isDeadEnd(unsigned int maze[], int x, int y) {
     } else{
         walls++;
     }
+    // Jeżeli punkt ma 3 i więcej ścian, to uważamy że jest on ślepym zaułkiem
     if (walls>=3)
     {
-        ClearBit(maze,x,y);
-        isDeadEnd(maze,currX,currY);   
+        ClearBit(maze,x,y); // usuwanie ślepego zaułku
+        isDeadEnd(maze,currX,currY); // przejście do następnego ślepego zaułku, punkt którego wcześniej zapisaliśmy
     }
-
-
 }
 
 // Funkcja usuwania ślepych zaułków z labiryntu
@@ -311,16 +241,16 @@ void removeDeadEnds(unsigned int maze[],mazeParams params) {
             isDeadEnd(maze,j,i);             
         }
         
+  
     }
-    
 }
 
 
-//-1 - start, 0 - lewo, 1 - prawo, 2 - dół, 3 - góra 
+// 0 - lewo, 1 - prawo, 2 - dół, 3 - góra 
 
 unsigned int availableDirections(unsigned int maze[],mazeParams params,cords moveCords){
     unsigned int directions=0;
-    
+
     if(moveCords.y+1<params.rows && TestBit(maze,moveCords.x,moveCords.y+1)){
         SetBit(&directions,2,0);
     }
@@ -328,11 +258,12 @@ unsigned int availableDirections(unsigned int maze[],mazeParams params,cords mov
         SetBit(&directions,3,0);
 
     }
-     if(moveCords.x-1<params.rows && TestBit(maze,moveCords.x-1,moveCords.y)){
+     if(moveCords.x-1<params.cols && TestBit(maze,moveCords.x-1,moveCords.y)){
         SetBit(&directions,0,0);
 
     }
-     if(moveCords.x+1<params.rows && TestBit(maze,moveCords.x+1,moveCords.y)){
+
+     if(moveCords.x+1<params.cols && TestBit(maze,moveCords.x+1,moveCords.y)){
         SetBit(&directions,1,0);
 
     }
@@ -427,51 +358,57 @@ int getBits(int * a ,int length){
     return count;
 }
 
+
+// funkcja rekurencyjna do poszukiwania najkrótszej ścieżki
+// ważne parametry : params - do zapisywania najkrótszej ścieżki w minSteps, head- głowa listy liniowej zapisującej kroki,
+// backDirection - kierunek z którego 'przyszliśmy'
 void goByPath(unsigned int maze[],mazeParams * params,node ** head,cords  currentCords,int backDirection){
-
+    
     cords tmp = currentCords;
-    int direction = move(maze,*(params),&currentCords,&backDirection);
+    int direction = move(maze,*(params),&currentCords,&backDirection); // przejście do najbliższego skrętu lub rozgałęzienia za pomocą funkcji pomocniczej
 
-    int steps= abs(tmp.x-currentCords.x)!=0?abs(tmp.x-currentCords.x):abs(tmp.y-currentCords.y);
+    int steps= abs(tmp.x-currentCords.x)!=0?abs(tmp.x-currentCords.x):abs(tmp.y-currentCords.y); // wyliczanie liczby zrobionych kroków
 
+    // Jeżeli doszliśmy do końca
     if(params->endCords.x==currentCords.x && currentCords.y==params->endCords.y){
-
-        push_back(head,steps+1,getAlternateDirection(backDirection));
-
-        int listSteps=getListSteps(*head);
+        
+        push_back(head,steps+1,getAlternateDirection(backDirection));// dodanie kroków do listy
+        
+        int listSteps=getListSteps(*head); // wyliczanie liczby kroków w liście
+        // sprawdzanie czy jest ścieżka najktótsza
         if(listSteps<params->minSteps || params->minSteps==0){
-            params->minSteps=listSteps;
-            printSolution("dane/solution.txt",*head);
+            params->minSteps=listSteps; // zapisywanie aktualnej najkrótszej ścieżki
+            saveSolution(*head,*params); // zapisywanie rozwiązania do pliku
         }
         pop_back(head);
 
         return ;
     }
+    // direction wszkazuje kierunek do względem do którego szliśmy, jeżeli jest równy -1 to nie zrobiliśmy żadnego kroku
     if(direction==-1){
 
         return ;
     }
 
-    push_back(head,steps+1,direction);
+    push_back(head,steps+1,direction);// dodanie kroków do listy
   
-    unsigned int directions=availableDirections( maze, *(params),currentCords);
-
-    int isWining=0;
+    unsigned int directions=availableDirections( maze, *(params),currentCords); // wyliczanie dostępnych kierunków jako tablice bitów [4]
+    // dfs 
     for (int i = 3; i >= 0; i--)
     {
+        // cykl , w którym chodzimy w każdym kierunku , oprócz z którego przyszliśmy
         if(i!=backDirection && TestBit(&directions,i,0)){
             tmp = currentCords;
-            ClearBit(maze,currentCords.x,currentCords.y);
-            makeStep(&tmp,i);
-            goByPath(maze,params,head,tmp,getAlternateDirection(i));
-            SetBit(maze,currentCords.x,currentCords.y);
+            ClearBit(maze,currentCords.x,currentCords.y); // oznaczenie odwiedzonego skrętu
+            makeStep(&tmp,i); // robimy jeden krok w stonę current kierunku
+            goByPath(maze,params,head,tmp,getAlternateDirection(i)); // wywołanie rekurencji, jako backDirection dajemy przeciwny kierunek w którym zrobiliśmy jeden krok
+            SetBit(maze,currentCords.x,currentCords.y); // usuwanie oznaczenia odwiedzonego skrętu
 
         }
     }
-    pop_back(head);
+    pop_back(head); // usuwanie z końca kroku
 }   
 void printMaze(unsigned int maze[],mazeParams params){
-    printf("Cols %d rows %d", params.cols, params.rows);
     for (int i = 0; i < params.rows; i++) {                 
         for (int j = 0; j<params.cols; j++) {
             if(TestBit(maze,j,i)){
@@ -490,50 +427,8 @@ void findSolution(unsigned int maze[],mazeParams * params){
  
     node* head = NULL;
     goByPath(maze,params,&head,params->startCords,-1);
-    writeMazeToFile(maze,*(params));
-    printf("min steps %d",params->minSteps);
-
-    
+    if(params->minSteps==0){
+        handleError(4);
+    }    
 }
 
-// Binarny plik
-
-void convertBinaryToText(const char *binaryFilename, const char *textFilename) {
-    FILE *binaryFile = fopen(binaryFilename, "rb");
-    if (binaryFile == NULL) {
-        printf("Error opening binary file.\n");
-        return;
-    }
-
-    FILE *textFile = fopen(textFilename, "w");
-    if (textFile == NULL) {
-        printf("Error opening text file.\n");
-        fclose(binaryFile);
-        return;
-    }
-
-    FileHeader fileHeader;
-    fread(&fileHeader, sizeof(FileHeader), 1, binaryFile);
-
-    uint32_t maze[MAZE_SIZE_X * MAZE_SIZE_Y / 32 + 1] = {0}; 
-
-    // czytanie maze data
-    for (int i = 0; i < fileHeader.columns * fileHeader.lines / 32; i++) {
-        fread(&maze[i], sizeof(uint32_t), 1, binaryFile);
-    }
-
-    // zapisywanie maze data w text file
-    for (int y = 0; y < fileHeader.lines; y++) {
-        for (int x = 0; x < fileHeader.columns; x++) {
-            int bitIndex = y * fileHeader.columns + x;
-            uint32_t wordIndex = bitIndex / 32;
-            uint32_t bitOffset = bitIndex % 32;
-            int isPath = (maze[wordIndex] >> bitOffset) & 1;
-            fprintf(textFile, "%c", isPath ? MAZE_PATH : MAZE_WALL); 
-        }
-        fprintf(textFile, "\n");
-    }
-
-    fclose(binaryFile);
-    fclose(textFile);
-}
