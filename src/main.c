@@ -1,48 +1,86 @@
-#include <stdio.h>
-#include <stdlib.h>
+
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <time.h> 
+#include <string.h>
+#include <limits.h>
 #include "maze.h"
+#include "binaryAdapter.h"
+#include <unistd.h>
 
-
-
-int main()
+int main(int argc, char *argv[])
 {
-    int n=getCountOfVertices("dane/maze.txt");
+    int opt;
+
+    char * mainFileName, *solutionFileName; // nazwa pliku wejściowego oraz wyjściowego (razem z rozszerzeniem)
+
+    char solutionType='n'; // typ rozwiązania, n - nijaki, b- binarny, t- tekstowy
     
-//     int numberOfVertices, numberOfEdges, i;
-//     int source, destination;
-//     int startingVertex;
+    
+    while ((opt = getopt(argc, argv, "f:s:h")) != -1)  
+    {  
+        switch (opt)  
+        {  
+            case 's': //nazwa pliku rozwiązania
+                solutionFileName= malloc(sizeof(char)*strlen(optarg));
+                strcpy( solutionFileName,optarg); 
+                break;  
+            case 'f': //nazwa pliku labiryntu
+                mainFileName= malloc(sizeof(char)*strlen(optarg));
+                strcpy( mainFileName,optarg); 
+            break;
+            case 'h': // wywołanie help
+                printHelp();
+                exit(EXIT_SUCCESS);
+            case ':':
+                handleError(1); 
+                break;  
+            default:  
+                handleError(1); 
+                break;  
+        }  
+    } 
+    char * mainFileExtension = strrchr(mainFileName, '.'); 
+    char * solutionFileExtension = strrchr(solutionFileName, '.');
 
-//     printf("Enter Number of Vertices and Edges in the Graph: ");
-
-    //  Graph *graph = initializeGraph(n);
-    // printf("size %d",sizeof(node));
-    char test[2050][2050];
-    // addEdgeToGraph(graph, 0, 1,1,1);
-    // addEdgeToGraph(graph, 0, 2,1,1);
-
-    // addEdgeToGraph(graph, 0, 3,1,1);
-
-//     printf("Add %d Edges of the Graph(Vertex numbering should be from 0 to %d)\n", numberOfEdges, numberOfVertices - 1);
-//    //  for (i = 0; i < numberOfEdges; i++)
-//    //  {
-//    //      scanf("%d%d", &source, &destination);
-//    //      addEdgeToGraph(graph, source, destination);
-//    //  }
-// addEdgeToGraph(graph, 0, 1);
-// addEdgeToGraph(graph, 1, 2);
-// addEdgeToGraph(graph, 0, 2);
-// addEdgeToGraph(graph, 2, 3);
-// addEdgeToGraph(graph, 4, 3);
-// addEdgeToGraph(graph, 5, 3);
-// addEdgeToGraph(graph, 5, 4);
-
-//     printf("Enter Starting Vertex for DFS Traversal: ");
+    if(mainFileExtension==NULL){
+        handleError(2);
+    }
+     if(solutionFileExtension==NULL){
+        handleError(5);
+    } // sprawdzania rozszerzeń plików 
+    mainFileExtension+=1;
+    solutionFileExtension+=1;
+    mazeParams params;
+    if (strcmp(mainFileExtension, "txt") == 0) 
+    {
+        params=initializeParams(mainFileName); // inicjalizacja parametrów labiryntu dla .txt
+        readMazeFromFile(&params); // wywołanie funkcji, jaka czyta plik .txt i zapisuje do tablicy 
 
 
-//     if (2 < 6)
-//     {
-//         printf("DFS Traversal: ");
-//         depthFirstSearch(graph, 2);
-//     }
-//     return 0;
+    } else if (strcmp(mainFileExtension, "bin") == 0) {
+        params=initializeParamsBin(mainFileName); // inicjalizacja parametrów labiryntu dla .bin
+        readMazeFromBinFile(&params);
+    }
+    else{
+        handleError(7);
+    }
+    if (strcmp(solutionFileExtension, "txt") == 0) 
+    {
+        solutionType='t'; 
+    } else if (strcmp(solutionFileExtension, "bin") == 0) {
+        solutionType='b';
+    }
+    else{
+        handleError(6);
+    }
+
+    params.solutionType=solutionType;
+    params.solutionFileName = malloc(sizeof(char)*strlen(solutionFileName));
+    strcpy(params.solutionFileName,solutionFileName);  // dopisywanie danych do parametrów
+    removeDeadEnds(&params); // usuwanie ślepych zaułków
+
+    findSolution(&params); // poszukiwanie ścieżki
+    printf("Labirynt został prawidłowo rozwiązany! \n"); // komunikat końcowy
+    return 0;
 }
