@@ -55,19 +55,22 @@ void push_back(node **head, int steps,int direction)
 
 void pop_back(node **head)
 {
-    
-    if((*head)->next==NULL)
-    {
-    *head=NULL;
-    }else
-    {
-    node *current=*head;
-    while (current->next->next!= NULL) {
-            current = current->next;
-        }
-    free(current->next);
-    current->next=NULL;
-    }  
+    if(*head!=NULL){
+
+        if((*head)->next==NULL)
+        {
+            *head=NULL;
+        }else
+        {
+            node *current=*head;
+            while (current->next->next!= NULL) {
+                    current = current->next;
+                }
+            free(current->next);
+            current->next=NULL;
+        }  
+    }
+
 }
 
 
@@ -178,4 +181,38 @@ void saveSolution(node *head,mazeParams params){
         break;
     }
    
+}
+void show(node *head)
+{
+    printf("\n");
+    if(head==NULL) printf("List is empty");
+    else
+    {
+        node *current=head;
+            do {
+            switch (current->direction)
+            {
+            case 0:
+                printf("GO LEFT");
+                break;
+            case 1:
+                printf("GO RIGHT");
+                break;
+            case 2:
+                printf("GO BOT");
+                break;
+            case 3:
+                printf("GO TOP");
+                break;
+            default:
+                break;
+            }
+            printf(", steps %d",current->countOfSteps);
+            printf("\n");
+            current = current->next;
+            }while (current != NULL);
+ 
+    }
+    printf("\n");
+
 }

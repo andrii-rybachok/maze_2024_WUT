@@ -14,7 +14,7 @@ typedef struct  node{
 
 
 
-
+void show(node *head);
 void push_back(node **head, int steps,int direction); // dodanie do końca listy
 void pop_back(node **head); // usuwanie z końca listy
 int getListSteps(node *head); // suma wszystkich kroków

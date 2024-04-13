@@ -56,6 +56,8 @@ int main(int argc, char *argv[])
     {
         params=initializeParams(mainFileName); // inicjalizacja parametrów labiryntu dla .txt
         readMazeFromFile(&params); // wywołanie funkcji, jaka czyta plik .txt i zapisuje do tablicy 
+
+
     } else if (strcmp(mainFileExtension, "bin") == 0) {
         params=initializeParamsBin(mainFileName); // inicjalizacja parametrów labiryntu dla .bin
         readMazeFromBinFile(&params);
