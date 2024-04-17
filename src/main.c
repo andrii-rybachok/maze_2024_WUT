@@ -10,39 +10,47 @@
 
 int main(int argc, char *argv[])
 {
+    printf("ads");
+
     int opt;
 
     char * mainFileName, *solutionFileName; // nazwa pliku wejściowego oraz wyjściowego (razem z rozszerzeniem)
 
     char solutionType='n'; // typ rozwiązania, n - nijaki, b- binarny, t- tekstowy
     
-    
+    if(argc<=1){
+        handleError(1); 
+    }
     while ((opt = getopt(argc, argv, "f:s:h")) != -1)  
-    {  
-        switch (opt)  
         {  
-            case 's': //nazwa pliku rozwiązania
-                solutionFileName= malloc(sizeof(char)*strlen(optarg));
-                strcpy( solutionFileName,optarg); 
-                break;  
-            case 'f': //nazwa pliku labiryntu
-                mainFileName= malloc(sizeof(char)*strlen(optarg));
-                strcpy( mainFileName,optarg); 
-            break;
-            case 'h': // wywołanie help
-                printHelp();
-                exit(EXIT_SUCCESS);
-            case ':':
-                handleError(1); 
-                break;  
-            default:  
-                handleError(1); 
-                break;  
+            switch (opt)  
+            {  
+                case 's': //nazwa pliku rozwiązania
+                    solutionFileName= malloc(sizeof(char)*strlen(optarg)+1);
+                    strcpy( solutionFileName,optarg); 
+                    break;  
+                case 'f': //nazwa pliku labiryntu
+                    mainFileName= malloc(sizeof(char)*strlen(optarg)+1);
+                    strcpy( mainFileName,optarg); 
+                    break;
+                case 'h': // wywołanie help
+                    printHelp();
+                    exit(EXIT_SUCCESS);
+                    break;
+                case ':':
+                    handleError(1); 
+                    break;  
+                default:  
+                    handleError(1); 
+                    break;  
         }  
     } 
+    if(mainFileName==NULL || solutionFileName==NULL){
+        handleError(1); 
+    }
     char * mainFileExtension = strrchr(mainFileName, '.'); 
     char * solutionFileExtension = strrchr(solutionFileName, '.');
-
+    
     if(mainFileExtension==NULL){
         handleError(2);
     }
