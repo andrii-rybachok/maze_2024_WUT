@@ -3,6 +3,8 @@
 #include "mazeParams.h"
 #include "binaryAdapter.h"
 
+#define TMP_NAME "dane/test.txt"
+
 #pragma pack(push, 1)
 typedef struct  node{
     unsigned short countOfSteps: 14; // liczba kroków
@@ -13,9 +15,9 @@ typedef struct  node{
 
 
 
-
+void clearCache(node ** head);
 void show(node *head);
 void push_back(node **head, int steps,int direction); // dodanie do końca listy
-void pop_back(node **head); // usuwanie z końca listy
-int getListSteps(node *head); // suma wszystkich kroków
-void saveSolution(node *head,mazeParams params); // zapisywanie rozwiązania binarnego lub tekstowego
+void pop_back(node **head,int count); // usuwanie z końca listy
+int getSolutionSteps(); // suma wszystkich kroków
+void saveSolution(mazeParams params); // zapisywanie rozwiązania binarnego lub tekstowego

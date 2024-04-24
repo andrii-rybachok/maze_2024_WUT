@@ -19,7 +19,7 @@ int TestBit(unsigned int A[],  int x ,int y,int rowSize )
     return ( (A[x/32] & (1 << (x%32) )) != 0 ) ;     
 }
 // 0 - lewo, 1 - prawo, 2 - dół, 3 - góra 
-
+// funkcja zwraca w postaci bitowego wektoru dostępne kierunki
 unsigned int availableDirections(mazeParams params,cords moveCords){
     unsigned int directions=0;
 
@@ -54,7 +54,7 @@ int getBits(int * a ,int length){
 
 int count_lines(char* fileName)
 {
-     FILE *file = fopen(fileName, "r");
+    FILE *file = fopen(fileName, "r");
     if (file == NULL) {
         return -1; 
     }
@@ -134,13 +134,9 @@ mazeParams initializeParams(char* originFileName){
     {
         for (int j = 0; j < params.cols; j++)
         {
-            ClearBit(params.maze,j,i,params.cols);
-            
+            ClearBit(params.maze,j,i,params.cols);   
         }
-        
-    }
-    
-    
+    }    
     return params;
 }
 
@@ -162,13 +158,10 @@ mazeParams initializeParamsBin(char* originFileName){
     {
         for (int j = 0; j < params.cols; j++)
         {
-            ClearBit(params.maze,j,i,params.cols);
-            
+            ClearBit(params.maze,j,i,params.cols); 
         }
-        
     }
-
-
+    
     return params;
 }
 
@@ -215,23 +208,25 @@ int readMazeFromFile(mazeParams* params) {
         handleError(2);
         return;
     }
-    
     int currRow = 0;
 
     char buff[MAZE_SIZE_X];
-    // przeczytujemy plik po jednej linijce i zapisujemy do tablicy
+    int lines = count_lines(params->originFileName);
+    // // przeczytujemy plik po jednej linijce i zapisujemy do tablicy
+    int i=0;
     while (fgets(buff, MAZE_SIZE_X, in)) {
       
-        for (int i = 0; i<strlen(buff); i++)
+        for (int i = 0; i <strlen(buff); i++)
         {
+            // printf("%d",strlen(buff));
             if(buff[i]==MAZE_PATH || buff[i]==MAZE_END || buff[i]==MAZE_START){
                 SetBit(params->maze,i,currRow,params->cols);
 
             }
         }     
         currRow++;
+        i++;
     }
-    
     fclose(in);
 
 }
@@ -243,8 +238,8 @@ int readMazeFromFile(mazeParams* params) {
 void isDeadEnd(mazeParams * params, int x, int y,int maxDeep) {
     int walls = 0;
     maxDeep++;
-
-    if (!TestBit(params->maze,x,y,params->cols) || maxDeep==10) // jeżeli jest ścianą , przerwij
+    // maxdeep - sztuczne upowielnianie programu, ponieważ w dużych labiryntach zżera dużo RAM, bo jest to funkcja rekurencyjna. Gdy usunięmy maxDeep , program działa odpowiednie szybciej
+    if (!TestBit(params->maze,x,y,params->cols) || maxDeep==2000) // jeżeli jest ścianą , przerwij
     {
         return;
     }
@@ -290,6 +285,7 @@ void isDeadEnd(mazeParams * params, int x, int y,int maxDeep) {
         isDeadEnd(params,currX,currY,maxDeep); // przejście do następnego ślepego zaułku, punkt którego wcześniej zapisaliśmy
     }
 }
+//sprawdzanie czy labirynt ma ślepy zaułek
 int checkForDeadEnd(mazeParams* params){
     cords current;
 
@@ -315,6 +311,7 @@ int checkForDeadEnd(mazeParams* params){
 // Funkcja usuwania ślepych zaułków z labiryntu
 void removeDeadEnds(mazeParams* params) {
     int hasDead=checkForDeadEnd(params);
+    // dopóki labirynt ma ślepy zaułek
     while (hasDead!=0)
     {
         
@@ -323,13 +320,12 @@ void removeDeadEnds(mazeParams* params) {
                 isDeadEnd(params,j,i,0);             
             }
         }
-        // printMaze(*params);
         hasDead=checkForDeadEnd(params);
     }
 }
 
-
-
+// 0 - lewo, 1 - prawo, 2 - dół, 3 - góra 
+// robi jeden krok w wybranym kierunku i zmienia odpowiednie koordynaty
 void makeStep(cords * moveCords,int direction){
     switch (direction)
     {
@@ -349,6 +345,7 @@ void makeStep(cords * moveCords,int direction){
         break;
     }
 }
+// zwraca przeciwny kierunek
 int getAlternateDirection(int direction){
     switch (direction)
     {
@@ -374,6 +371,7 @@ int getAlternateDirection(int direction){
 int move(mazeParams params,cords * moveCords,int * backDirection,node ** head,int startDirection){
     int countOfMoves=0;
     int countOfSteps=0;
+    // robienie jednego kroku w zadanym kierunku 
     if(startDirection!=-1){
         makeStep(moveCords,startDirection);
         countOfSteps++;
@@ -385,32 +383,29 @@ int move(mazeParams params,cords * moveCords,int * backDirection,node ** head,in
     int direction=-1;
 
     int possibleDirections=0;
-    // printf("start x %d,y %d\n",moveCords->x,moveCords->y);
-
     do
     {
+        //liczba dostępnych kierunków
         possibleDirections=0;
-        // printf("curr x %d,y %d\n",moveCords->x,moveCords->y);
+        // otrzymywanie bitowego wektoru z dostępnymi kierunkami
         unsigned int directions=availableDirections(params,*moveCords);
         for (int i = 0; i < 4; i++)
         {
+            // obliczanie liczby dostępnych kierunków poprzez sprawdzanie czy nie byliśmy już w nim
             if(i!=*backDirection && TestBit(&directions,i,0,0)){
                 direction = i;
                 possibleDirections++;
             }
             
         }
-                // printMaze(params);
-
-        // printf("test x %d,y %d\n",moveCords->x,moveCords->y);
-
+        // jeżeli mamy dokładnie jeden dostępny kierunek , robimy jeden krok w go stronę
         if(possibleDirections==1 ){        
             makeStep(moveCords,direction);
 
             countOfSteps++;
-            // printf("steps x %d,y %d, steps %d\n",moveCords->x,moveCords->y,countOfSteps);
             *backDirection=getAlternateDirection(direction);
         }
+        // aktualizacja dostępnych kierunków
         directions =availableDirections(params,*moveCords);
         possibleDirections=0;
         for (int i = 0; i < 4; i++)
@@ -420,28 +415,18 @@ int move(mazeParams params,cords * moveCords,int * backDirection,node ** head,in
             }
             
         }
-        // for (int i = 0; i < 4; i++)
-        //     {
-        //         if( TestBit(&directions,i,0,0)){
-        //             printf(" i %d,",i);
-        //         }
-                
-        //     }
+        // sprawdzanie czy jesteśmy w skręcie, jeżeli tak to zapizujemy kroki do listy
         if(possibleDirections<=1&&(TestBit(&directions,0,0,0)!=TestBit(&directions,1,0,0)) || (TestBit(&directions,2,0,0)!=TestBit(&directions,3,0,0))){
-            // printf("tes x %d,y %d\n",moveCords->x,moveCords->y);
-            
-            // printf("\n");
-            // printf(" direction %d \n",direction);
+
             countOfMoves++;
-            // printf("add , moves %d:\n",countOfMoves);
+
             push_back(head,countOfSteps,direction);
-            // show(*head);
 
             countOfSteps=0;
         }
     } while (possibleDirections==1);
-    
-    
+    clearCache(head);
+    // zwracanie iłości kroków
     return countOfMoves; 
 }
 
@@ -451,29 +436,21 @@ int move(mazeParams params,cords * moveCords,int * backDirection,node ** head,in
 // ważne parametry : params - do zapisywania najkrótszej ścieżki w minSteps, head- głowa listy liniowej zapisującej kroki,
 // backDirection - kierunek z którego 'przyszliśmy'
 void goByPath(mazeParams * params,node ** head,cords  currentCords,int backDirection){
-    // printf("start recursion, x %d , y %d\n",currentCords.x,currentCords.y);
     cords tmp = currentCords;
-    int countOfMoves = move(*(params),&currentCords,&backDirection,head,getAlternateDirection(backDirection)); // przejście do najbliższego skrętu lub rozgałęzienia za pomocą funkcji pomocniczej
+    int countOfMoves = move(*(params),&currentCords,&backDirection,head,getAlternateDirection(backDirection)); // przejście do najbliższego  rozgałęzienia za pomocą funkcji pomocniczej
 
     int steps= abs(tmp.x-currentCords.x)!=0?abs(tmp.x-currentCords.x):abs(tmp.y-currentCords.y); // wyliczanie liczby zrobionych kroków
     // Jeżeli doszliśmy do końca
     if(params->endCords.x==currentCords.x && currentCords.y==params->endCords.y){
-        int listSteps=getListSteps(*head); // wyliczanie liczby kroków w liście
+
+        int listSteps=getSolutionSteps(); // wyliczanie liczby kroków w liście
         // sprawdzanie czy jest ścieżka najktótsza
         if(listSteps<params->minSteps || params->minSteps==0){
             params->minSteps=listSteps; // zapisywanie aktualnej najkrótszej ścieżki
-            saveSolution(*head,*params); // zapisywanie rozwiązania do pliku
+            saveSolution(*params); // zapisywanie rozwiązania do pliku
         }
-        // printf("fin:\n");
-        // printf("count of moves %d\n",countOfMoves);
-        for (int i = 0; i < countOfMoves; i++)
-        {
-            // printf("end func:\n");
-            pop_back(head);
-            // show(*head);
-
-        }
-
+        // usuwanie kroków które zrobiliśmy dokąd szliśmy do tego rozgałęzienia
+        pop_back(head,countOfMoves);
         return ;
     }
     // direction wszkazuje kierunek do względem do którego szliśmy, jeżeli jest równy -1 to nie zrobiliśmy żadnego kroku
@@ -483,8 +460,6 @@ void goByPath(mazeParams * params,node ** head,cords  currentCords,int backDirec
         return ;
     }
 
-    // push_back(head,steps+1,getAlternateDirection(backDirection));// dodanie kroków do listy
-  
     // dfs 
     for (int i = 3; i >= 0; i--)
     {
@@ -492,28 +467,16 @@ void goByPath(mazeParams * params,node ** head,cords  currentCords,int backDirec
         if(i!=backDirection && TestBit(&directions,i,0,params->cols)){
             
             tmp = currentCords;
-            ClearBit(params->maze,currentCords.x,currentCords.y,params->cols); // oznaczenie odwiedzonego skrętu
-            // makeStep(&tmp,i); // robimy jeden krok w stonę current kierunku
-            // printf("start loop, direction %d:\n",i);
-            // push_back(head,1,i);
-            // show(*head);
+            ClearBit(params->maze,currentCords.x,currentCords.y,params->cols); // oznaczenie odwiedzonego rozgałęzienia
+
             goByPath(params,head,tmp,getAlternateDirection(i)); // wywołanie rekurencji, jako backDirection dajemy przeciwny kierunek w którym zrobiliśmy jeden krok
-            // printf("end loop:\n");
-            // pop_back(head);
-            // show(*head);
-            SetBit(params->maze,currentCords.x,currentCords.y,params->cols); // usuwanie oznaczenia odwiedzonego skrętu
+
+            SetBit(params->maze,currentCords.x,currentCords.y,params->cols); // usuwanie oznaczenia odwiedzonego rozgałęzienia
 
         }
     }
-    // printf("count of moves %d\n",countOfMoves);
-    for (int i = 0; i < countOfMoves; i++)
-    {
-        // printf("end func:\n");
-        pop_back(head);
-        // show(*head);
-
-    }
-    
+    // usuwanie kroków które zrobiliśmy dokąd szliśmy do tego rozgałęzienia
+    pop_back(head,countOfMoves);
 }   
 void printMaze(mazeParams params){
     for (int i = 0; i < params.rows; i++) {                 
@@ -528,16 +491,16 @@ void printMaze(mazeParams params){
         printf("\n");
     }
 }
+// znależienie rozwiązania labiryntu
 void findSolution(mazeParams * params){
     params->minSteps=0;
     node* head = NULL;
     goByPath(params,&head,params->startCords,-1);
     if(params->minSteps==0){
-    printMaze(*params);
         handleError(4);
     }
     else{
-        printf("min steps %d\n",params->minSteps);
+        printf("iłość kroków %d\n",params->minSteps);
     }    
 }
 

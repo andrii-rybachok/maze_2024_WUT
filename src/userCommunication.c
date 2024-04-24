@@ -26,6 +26,9 @@ void handleError(int errorType){
         case 7:
             fprintf(stderr,"7. Podane rozszerzenie pliku labiryntu jest nieobsługiwane");
             break;
+        case 8:
+            fprintf(stderr,"8. Nie można otwórzyć plik tymczasowy");
+            break;
     default:
         break;
     }

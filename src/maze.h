@@ -14,7 +14,7 @@
 #define MAZE_PATH ' '//ścieżki
 
 
-#define MAZE_SIZE_X 2049 //maksymalne rozmiary labiryntu
+#define MAZE_SIZE_X 2051 //maksymalne rozmiary labiryntu
 #define MAZE_SIZE_Y 2049
 
 
